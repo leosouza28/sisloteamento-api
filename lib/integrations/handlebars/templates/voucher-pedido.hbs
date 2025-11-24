@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voucher Pedido</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Quicksand:wght@300..700&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap");
+
+        body {
+            font-family: 'Fredoka', Arial, Helvetica, sans-serif;
+            background: white;
+        }
+
+        page[size="A4"] {
+            background: white;
+            width: 20cm;
+            display: block;
+            margin: 0 auto;
+        }
+
+        p {
+            font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+        }
+
+        .img-ingresso {
+            width: 12rem;
+            height: 12rem;
+        }
+
+        .container-ingresso-info {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .qrcode-ingresso-size {
+            width: 7rem;
+            height: 7rem;
+        }
+    </style>
+</head>
+
+<body>
+    <page size="A4">
+        <div class="border border-light-subtle p-4">
+            <div class="row g-2 mb-3">
+                <div class="col-3">
+                    <img src="data:image/png;base64,{{logo}}" class="img-fluid rounded-4">
+                </div>
+                <div class="col-9">
+                    <div class="d-flex flex-column justify-content-center h-100">
+                        <h4 class="text-center text-muted mb-0">Voucher</h4>
+                        <h3 class="text-center fw-semibold mb-0">{{codigo}}</h3>
+                        {{#ifCond status '==' 'FINALIZADA'}}
+                        <p class="text-center text-success fw-semibold mb-0">Pedido válido</p>
+                        {{/ifCond}}
+                    </div>
+                </div>
+            </div>
+            {{#if is_agendamento}}
+            <div class="row g-1 mb-3">
+                <div class="col-12">
+                    <p class="text-muted mb-0 fredoka fw-bold fs-5">Informações adicionais</p>
+                </div>
+                <div class="col-8">
+                    <p class="text-muted mb-0 fredoka">Plano</p>
+                    <p class="mb-0 fredoka fw-bold">{{plano.codigo}} - {{plano.nome}}</p>
+                </div>
+                <div class="col-4">
+                    <p class="text-muted mb-0 fredoka">Canal</p>
+                    <p class="mb-0 fredoka fw-bold">{{canal_venda}}</p>
+                </div>
+            </div>
+            {{/if}}
+            <div class="row g-1 mb-3">
+                <div class="col-12">
+                    {{#if is_venda}}
+                    <p class="text-muted mb-0 fredoka fw-bold fs-5">Comprador</p>
+                    {{/if}}
+                    {{#if is_agendamento}}
+                    <p class="text-muted mb-0 fredoka fw-bold fs-5">Agendado por</p>
+                    {{/if}}
+                </div>
+                <div class="col-6">
+                    <p class="text-muted mb-0 fredoka">Nome</p>
+                    <p class="mb-0 fredoka fw-bold">{{cliente.nome}}</p>
+                </div>
+                <div class="col-3">
+                    <p class="text-muted mb-0 fredoka">Documento</p>
+                    <p class="mb-0 fredoka fw-bold">{{cliente.documento}}</p>
+                </div>
+                <div class="col-3">
+                    <p class="text-muted mb-0 fredoka">Telefone</p>
+                    <p class="mb-0 fredoka fw-bold">{{cliente.telefone_principal.valor}}</p>
+                </div>
+            </div>
+            <div class="row g-1 mb-3">
+                <div class="col-12">
+                    <p class="text-muted mb-0 fredoka fw-bold fs-5">Ingressos</p>
+                </div>
+            </div>
+            {{#each items}}
+            <div class="d-flex flex-row mb-3 bg-white rounded-4 border border-light-subtle">
+                <img src="{{imagem_principal.url}}" class="img-ingresso rounded-start-4" />
+                <div class="container-ingresso-info px-2 py-1">
+                    <div class="d-flex flex-column flex-grow-1">
+                        <div class="d-flex flex-column">
+                            <p class="fw-bold mb-0 fredoka">{{nome}}</p>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <p class="text-muted mb-0 fredoka">Portador</p>
+                            <p class="mb-0 fredoka fw-bold">{{portador.nome}}</p>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <p class="text-muted mb-0 fredoka">Documento</p>
+                            <p class="mb-0 fredoka fw-bold">{{portador.documento}}</p>
+                        </div>
+                        {{#ifCond status_dados '==' 'CONCLUIDO'}}
+                        <p class="fw-semibold text-success mb-0">Dados do visitante confirmado</p>
+                        {{/ifCond}}
+                    </div>
+                    <div class="d-flex flex-column">
+                        <p class="text-muted mb-0 fredoka">Data da visita</p>
+                        <p class="mb-0 fredoka fw-bold">{{data_visita}}</p>
+                    </div>
+                </div>
+                <div class="d-flex flex-column pe-3 py-1">
+                    <div class="h-100 d-flex align-items-center">
+                        <img src="{{qrcode_bs64}}" class="qrcode-ingresso-size">
+                    </div>
+                    <div class="d-flex flex-column">
+                        <p class="text-muted mb-0 fredoka text-center">Status</p>
+                        <p class="mb-0 fredoka fw-bold text-center">{{status}}</p>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </page>
+</body>
+
+</html>

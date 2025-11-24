@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        page[size="A4"] {
+            background: white;
+            width: 20cm;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="row mb-3 g-3 text-uppercase">
+            <div class="col-12 mb-3">
+                <h5 class="text-center fw-bold my-3">Relatório de vendas por período</h5>
+                <p class="mb-0"><strong>Período:</strong> {{periodo}}</p>
+                <p class="mb-0"><strong>Emitido por:</strong> {{emitido_por.nome}} em {{emitido_em}}</p>
+            </div>
+            <div class="col-12">
+                <table class="table table-striped">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Data</th>
+                            <th>Tipo&nbsp;Venda</th>
+                            <th>Canal&nbsp;Venda</th>
+                            <th>Cliente</th>
+                            <th>Status</th>
+                            <th class="text-end">Bruto</th>
+                            <th class="text-end">Desconto</th>
+                            <th class="text-end">Liquido</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each lista_vendas}}
+                        <tr>
+                            <td>{{data_venda_brl}}</td>
+                            <td>{{tipo_venda}}</td>
+                            <td>{{canal_venda}}</td>
+                            <td>{{cliente_nome}}</td>
+                            <td>{{status}}</td>
+                            <td class="text-end">{{valor_bruto_brl}}</td>
+                            <td class="text-end">{{valor_desconto_brl}}</td>
+                            <td class="text-end">{{valor_liquido_brl}}</td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th colspan="5">Total</th>
+                            <th class="text-end">{{valor_bruto}}</th>
+                            <th class="text-end">{{valor_desconto}}</th>
+                            <th class="text-end">{{valor_liquido}}</th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div class="col-12">
+                <h5 class="text-center fw-bold">Resumo</h5>
+            </div>
+            <div class="col-12">
+                <table class="table table-striped">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Canal</th>
+                            <th class="text-center">Vendas</th>
+                            <th class="text-center">Ingressos</th>
+                            <th class="text-end">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Portaria</td>
+                            <td class="text-center">{{total.qtd_vendas_bilheteria}}</td>
+                            <td class="text-center">{{total.qtd_ingressos_bilheteria}}</td>
+                            <td class="text-end">R${{total.total_vendas_bilheteria}}</td>
+                        </tr>
+                        <tr>
+                            <td>Ecommerce</td>
+                            <td class="text-center">{{total.qtd_vendas_ecommerce}}</td>
+                            <td class="text-center">{{total.qtd_ingressos_ecommerce}}</td>
+                            <td class="text-end">R${{total.total_vendas_ecommerce}}</td>
+                        </tr>
+                        <tr>
+                            <td>Planos</td>
+                            <td class="text-center">{{total.qtd_vendas_planos}}</td>
+                            <td class="text-center">---</td>
+                            <td class="text-end">R${{total.total_vendas_planos}}</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th>Total</th>
+                            <th class="text-center">{{total.qtd_total_vendas}}</th>
+                            <th class="text-center">{{total.qtd_total_ingressos}}</th>
+                            <th class="text-end">R${{total.total_total_vendas}}</th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

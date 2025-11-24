@@ -1,0 +1,5 @@
+dispatch:
+  - url: "api-sisloteamento.lsdevelopers.dev/*"
+    service: sisloteamento-api
+  - url: "sisloteamento.lsdevelopers.dev/*"
+    service: sisloteamento-front

@@ -1,0 +1,9 @@
+cron:
+  - description: "Cancelar pix pendentes"
+    url: "/cron/cancelar-pix-pendentes"
+    schedule: every 1 mins
+    target: "default"
+  - description: "Reprocessar pix pendentes"
+    url: "/cron/reprocessar-pix"
+    schedule: every 1 mins
+    target: "default"

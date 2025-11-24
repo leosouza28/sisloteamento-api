@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carteirinha Estrela Dalva</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Quicksand:wght@300..700&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap");
+
+        body {
+            font-family: 'Fredoka', sans-serif;
+        }
+
+        .card {
+            width: 250px;
+            height: 400px;
+        }
+
+        .bg-dalva {
+            background-color: #1d2d69;
+        }
+
+        .border-color-dalva {
+            border-color: #1d2d69 !important;
+        }
+
+        .img-usuario {
+            background-image: url({{foto}});
+            width: 5.2rem;
+            height: 5.2rem;
+            background-position: center;
+            background-size: contain;
+            background-clip: border-box;
+            border-radius: 100%;
+            border: 2.4px solid #1d2d69
+        }
+
+        .img-qrcode {
+            width: 4.4rem;
+        }
+
+        .img-logo {
+            width: 8rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card shadow-sm  border border-color-dalva">
+        <div class="d-flex flex-column gap-2 h-100">
+            <div class="w-100 border-2 bg-dalva justify-content-center d-flex rounded-top">
+                <img src="{{logo}}" class="img-logo" alt="Logo Estrela Dalva">
+            </div>
+            <div class="d-flex flex-column h-100 align-items-center justify-content-center gap-1">
+                <div class="w-100 d-flex justify-content-center mb-2">
+                    <div class="img-usuario"></div>
+                </div>
+                <div style="line-height: 1.2rem;text-align: center;" class="d-flex flex-column">
+                    <small class="mb-1">{{nome_cliente}}</small>
+                    <div style="line-height: 0.94rem;" class="d-flex flex-column mb-2">
+                        <small class="text-muted" style="font-size:0.68rem;">Plano</small>
+                        <small class="mb-0">{{codigo_plano}}</small>
+                        <small class="mb-0 ">{{nome_plano}}</small>
+                        <small class="mb-0">{{dependencia}}</small>
+                    </div>
+                    <div style="line-height: 0.94rem;" class="d-flex flex-column">
+                        <small class="text-muted" style="font-size:0.68rem;">Validade</small>
+                        <small class="mb-0">{{validade}}</small>
+                    </div>
+                </div>
+            </div>
+            <div class="w-100 d-flex justify-content-center">
+                <img src="{{qrcode}}" alt="QR Code" class="img-qrcode">
+            </div>
+            <div class="bg-dalva text-white p-0 m-0 rounded-bottom text-center " style="line-height: 0.90;padding-bottom: 1px !important;">
+                <small style="font-size: 0.68rem;" class="text-white m-0 p-0">Parque Aquático
+                    Estrela Dalva</small>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

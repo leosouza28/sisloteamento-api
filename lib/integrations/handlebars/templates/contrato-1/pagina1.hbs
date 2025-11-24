@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Página 1 - Contrato</title>
+</head>
+<style>
+    body {
+        margin: 0px !important;
+        padding: 0px !important;
+        text-transform: capitalize;
+    }
+
+    .pagina {
+        width: 210mm;
+        height: 297mm;
+    }
+
+    .img-contrato {
+        background-image: url("data:image/jpg;base64,{{{image1}}}");
+        width: 210mm;
+        height: 297mm;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        /* Isso é importante */
+    }
+
+    .campo {
+        position: absolute;
+        font-size: 12pt;
+        font-family: Arial, sans-serif;
+        color: black;
+        white-space: nowrap;
+    }
+
+    .vertical {
+        transform: rotate(-90deg);
+        transform-origin: left top;
+    }
+</style>
+
+<body>
+    <div class="pagina">
+        <div class="img-contrato">
+            <!-- Número do Passaporte (canto superior esquerdo) -->
+            <div class="campo vertical" style="top: 53mm; left: 20mm; font-size: 22px; font-weight: bold; width: 37mm; text-align: center; ">
+                {{codigo_plano}}
+            </div>
+
+            <div class="campo vertical" style="top: 177mm; left: 81mm; font-size: 18px; font-weight: bold; width: 51mm; text-align: center;">
+                {{numero_secretaria}}
+            </div>
+
+            <div class="campo vertical" style="top: 189mm; left: 106.5mm; font-size: 22px; font-weight: bold; width: 169mm; text-align: center;">
+                {{plano_titular}}
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

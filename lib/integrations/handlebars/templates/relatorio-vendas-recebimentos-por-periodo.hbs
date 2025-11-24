@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        page[size="A4"] {
+            background: white;
+            width: 20cm;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="row mb-3 g-3 text-uppercase">
+            <div class="col-12 mb-3">
+                <h5 class="text-center fw-bold my-3">Relatório de recebimentos de vendas por período</h5>
+                <p class="mb-0"><strong>Período:</strong> {{periodo}}</p>
+                <p class="mb-0"><strong>Emitido por:</strong> {{emitido_por.nome}} em {{emitido_em}}</p>
+            </div>
+            <div class="col-12">
+                {{#each lista}}
+                <table class="table table-striped">
+                    <thead class="table-dark">
+                        <tr>
+                            <th colspan="3">Situação: {{situacao}}</th>
+                        </tr>
+                        <tr>
+                            <th>Forma&nbsp;Pagamento</th>
+                            <th class="text-center">Cobranças</th>
+                            <th class="text-end">Valor&nbsp;Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each formas}}
+                        <tr>
+                            <td>{{forma_pagamento}}</td>
+                            <td class="text-center">{{count}}</td>
+                            <td class="text-end">R${{valor_brl}}</td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                    <footer>
+                        <tr>
+                            <th>Total</th>
+                            <th class="text-center">{{totalCobrancas}}</th>
+                            <th class="text-end">R${{valor_brl}}</th>
+                        </tr>
+                    </footer>
+                </table>
+                {{/each}}
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

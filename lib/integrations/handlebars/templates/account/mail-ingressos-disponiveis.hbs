@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Compra Aprovada</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+
+        /* Estilos para mobile-first */
+        @media screen and (max-width: 600px) {
+            .container {
+                width: 100% !important;
+                padding: 10px !important;
+            }
+
+            .button {
+                padding: 14px 20px !important;
+                font-size: 16px !important;
+            }
+
+            h2 {
+                font-size: 22px !important;
+            }
+
+            p,
+            .price {
+                font-size: 16px !important;
+            }
+        }
+    </style>
+</head>
+
+<body
+    style="margin:0; padding:0; font-family: 'Fredoka', Arial, sans-serif; background-color: #1d2d69; color: #1d2d69;">
+    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+            <td align="center" style="padding: 20px 0;">
+                <table class="container" role="presentation" border="0" cellpadding="0" cellspacing="0" width="600"
+                    style="width: 600px; background: #ffffff; border-radius: 8px; overflow: hidden;">
+                    <tr>
+                        <td align="center" bgcolor="#00c2c7" style="padding: 20px;">
+                            <h2
+                                style="margin: 0; color: #ffffff; font-family: 'Fredoka', Arial, sans-serif; font-size: 26px;">
+                                Pedido Aprovado!</h2>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td
+                            style="padding: 30px 40px; text-align: left; color: #1d2d69; font-family: 'Fredoka', Arial, sans-serif;">
+                            <p style="font-size: 18px; margin: 0 0 20px;">Olá, {{nomeCliente}}</p>
+                            <p style="font-size: 18px; margin: 0 0 20px;">
+                                Seu pedido foi aprovado com sucesso! 🎉
+                            </p>
+                            <p style="font-size: 18px; margin: 0 0 20px;">
+                                <strong>Valor do pedido:</strong> <span class="price"
+                                    style="color: #f04e23; font-size: 20px;">R${{pedidoValor}}</span>
+                            </p>
+                            <p style="font-size: 18px; margin: 20px 0;">
+                                O seu voucher com os ingressos está em anexo neste e-mail. Apresente-o no momento da
+                                entrada no Parque Aquático Estrela Dalva, caso necessário, preencha o formulário de convidados.
+                                O formulário pode ser acessado através do link abaixo ou na tela "Meus Pedidos" do
+                                nosso site.
+                            </p>
+                            <div style="text-align: center; margin: 40px 0;">
+                                <a href="{{{urlConvidados}}}"
+                                    style="background-color: #f9b233; color: #1d2d69; padding: 16px 32px; text-decoration: none; border-radius: 6px; font-size: 18px; display: inline-block; font-weight: bold; font-family: 'Fredoka', Arial, sans-serif;"
+                                    class="button">
+                                    Informar convidados
+                                </a>
+                            </div>
+                            <p style="font-size: 16px; margin: 0;">
+                                Dúvidas? <a href="mailto:atendimento@parqueestreladalva.com.br"
+                                    style="color: #00c2c7; text-decoration: none;">Fale conosco</a>.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" bgcolor="#f04e23"
+                            style="padding: 15px; color: #ffffff; font-size: 14px; font-family: 'Fredoka', Arial, sans-serif;">
+                            © 2025 Parque Aquático Estrela Dalva
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

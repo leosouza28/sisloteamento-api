@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        page[size="A4"] {
+            background: white;
+            width: 20cm;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="row mb-3 g-3 text-uppercase">
+            <div class="col-12 mb-3">
+                <h5 class="text-center fw-bold my-3">Relatório de usuarios por período</h5>
+                <p class="mb-0"><strong>Período:</strong> {{periodo}}</p>
+                <p class="mb-0"><strong>Emitido por:</strong> {{emitido_por.nome}} em {{emitido_em}}</p>
+            </div>
+            <div class="col-12">
+                <table class="table table-striped">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Nome</th>
+                            <th>Tipo&nbsp;documento</th>
+                            <th>Documento</th>
+                            <th>Email</th>
+                            <th>Data&nbsp;nascimento</th>
+                            <th>Sexo</th>
+                            <th>Acessos</th>
+                            <th class="text-center">Status</th>
+                            <th class="text-end">Cadastrado&nbsp;em</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each lista_usuarios}}
+                        <tr>
+                            <td>{{nome}}</td>
+                            <td>{{doc_type}}</td>
+                            <td>{{documento}}</td>
+                            <td>{{email}}</td>
+                            <td>{{data_nascimento_brl}}</td>
+                            <td>{{sexo}}</td>
+                            <td>{{niveis}}</td>
+                            <td class="text-center">{{status}}</td>
+                            <td class="text-end">{{data_cadastro_brl}}</td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="10"><strong>Total: </strong> {{lista_usuarios.length}} usuários(s)</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </div>
+</body>
+
+</html>
