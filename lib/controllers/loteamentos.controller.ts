@@ -121,6 +121,54 @@ export default {
             errorHandler(error, res);
         }
     },
+    alterarSituacaoLotes: async (req: Request, res: Response, next: NextFunction) => {
+        try {
+            // @ts-ignore
+            if (!isScopeAuthorized('loteamentos.editar', req.usuario?.scopes)) {
+                throw UNAUTH_SCOPE
+            }
+            const { lote_ids, situacao } = req.body;
+            if (!lote_ids || !Array.isArray(lote_ids) || lote_ids.length === 0) {
+                throw new Error("IDs dos lotes não informados.");
+            }
+            if (!situacao) {
+                throw new Error("Situação não informada.");
+            }
+            const situacoesValidas = [LOTE_SITUACAO.DISPONIVEL, LOTE_SITUACAO.BLOQUEADO];
+            if (!situacoesValidas.includes(situacao)) {
+                throw new Error("Situação inválida.");
+            }
+
+            // VErifica se todos os lotes existem
+            const lotesExistentes = await LotesModel.find({ _id: { $in: lote_ids } }).lean();
+            if (lotesExistentes.length !== lote_ids.length) {
+                throw new Error("Um ou mais lotes não foram encontrados.");
+            }
+            // Depois verifica se nenhum deles está RESERVADO ou VENDIDO
+            const lotesInvalidos = lotesExistentes.filter(lote =>
+                lote.situacao === LOTE_SITUACAO.RESERVADO || lote.situacao === LOTE_SITUACAO.VENDIDO
+            );
+            if (lotesInvalidos.length > 0) {
+                throw new Error("Um ou mais lotes estão reservados ou vendidos e não podem ser alterados.");
+            }
+            // Atualiza os lotes
+            const resultado = await LotesModel.updateMany(
+                { _id: { $in: lote_ids } },
+                {
+                    $set: {
+                        situacao: situacao
+                    }
+                }
+            );
+            res.json({
+                success: true,
+                message: `${resultado.modifiedCount} lote(s) atualizado(s) com sucesso.`,
+                modificados: resultado.modifiedCount
+            });
+        } catch (error) {
+            errorHandler(error, res);
+        }
+    },
     getLotesPorLoteamento: async (req: Request, res: Response, next: NextFunction) => {
         try {
             // @ts-ignore
@@ -143,11 +191,23 @@ export default {
             if (!loteamento) {
                 throw new Error("Loteamento não encontrado.");
             }
-
+            let keys_situacao = {
+                'D': LOTE_SITUACAO.DISPONIVEL,
+                'R': LOTE_SITUACAO.RESERVADO,
+                'B': LOTE_SITUACAO.BLOQUEADO,
+                'V': LOTE_SITUACAO.VENDIDO,
+            }
             // Esconder todos os lotes existentes para este loteamento
             await LotesModel.updateMany(
                 { 'loteamento._id': loteamento._id },
-                { $set: { exibivel: false } }
+                {
+                    $unset: {
+                        reserva: ""
+                    },
+                    $set: {
+                        exibivel: false
+                    }
+                }
             );
             let quantidade_quadras = 0;
             let quantidade_lotes = 0;
@@ -157,11 +217,14 @@ export default {
                 _quadras[i.quadra] = true;
             }
             quantidade_quadras = Object.keys(_quadras).length;
+            let lotes_diferenca: string[] = [];
             let upserts = req.body.lotes.map(async (lote: any) => {
                 let quadraPad3 = lote.quadra.padStart(3, '0');
                 let lotePad3 = lote.lote.padStart(3, '0');
                 let loteamento_quadra_lote = `${loteamento.slug}-Q${quadraPad3}-L${lotePad3}`.toUpperCase();
                 let _lote = await LotesModel.findOne({ loteamento_quadra_lote }).lean();
+                // @ts-ignore
+                let situacao_csv = keys_situacao[lote.situacao] || LOTE_SITUACAO.DISPONIVEL;
                 let payload = {
                     loteamento_quadra_lote,
                     loteamento: {
@@ -171,11 +234,13 @@ export default {
                     quadra: quadraPad3,
                     lote: lotePad3,
                     area: lote.area,
+                    situacao: situacao_csv,
                     valor_area: lote.valor_area,
                     valor_total: lote.valor_total,
-                    situacao: _lote?.situacao || LOTE_SITUACAO.DISPONIVEL,
                     valor_entrada: lote.entrada || 0,
                     exibivel: true,
+                    situacao_sistema: undefined,
+                    situacao_csv: situacao_csv,
                 }
                 quantidade_lotes += 1;
                 valor_total_lotes += lote.valor_total;
@@ -196,7 +261,31 @@ export default {
                     }
                 }
             );
-            res.json({ message: "Lotes importados com sucesso." });
+            // Verificar todas as reservas e atualizar situação dos lotes vinculados
+            let reservas = await ReservasModel.find({
+                'loteamento._id': loteamento._id,
+                'situacao': {
+                    $in: [
+                        RESERVA_SITUACAO.ATIVA,
+                        RESERVA_SITUACAO.CONCLUIDA
+                    ]
+                }
+            }).lean();
+            for (let reserva of reservas) {
+                let loteUpdates = reserva.lotes.map(lote => {
+                    return LotesModel.updateOne(
+                        { loteamento_quadra_lote: lote.loteamento_quadra_lote },
+                        {
+                            $set: {
+                                reserva: reserva,
+                                situacao: reserva.situacao === RESERVA_SITUACAO.CONCLUIDA ? LOTE_SITUACAO.VENDIDO : LOTE_SITUACAO.RESERVADO
+                            }
+                        }
+                    );
+                });
+                await Promise.all(loteUpdates);
+            }
+            res.json({ message: `Lotes importados com sucesso. ${lotes_diferenca.length ? 'Lotes com diferença de situação: ' + lotes_diferenca.join(', ') : ''}` });
         } catch (error) {
             errorHandler(error, res);
         }
@@ -271,6 +360,11 @@ export default {
                 if (!_reserva) {
                     throw new Error("Reserva não encontrada.");
                 }
+                _reserva.atualizado_por = {
+                    data_hora: dayjs().toDate(),
+                    // @ts-ignore
+                    usuario: req.usuario
+                };
                 if (_reserva.situacao === RESERVA_SITUACAO.CANCELADA) {
                     throw new Error("Reserva já está cancelada.");
                 }
@@ -281,7 +375,14 @@ export default {
                 let loteUpdates = _reserva.lotes.map(lote => {
                     return LotesModel.updateOne(
                         { loteamento_quadra_lote: lote.loteamento_quadra_lote },
-                        { $set: { situacao: 'DISPONIVEL' } }
+                        {
+                            $set: {
+                                situacao: 'DISPONIVEL'
+                            },
+                            $unset: {
+                                reserva: ""
+                            }
+                        }
                     );
                 });
                 await Promise.all(loteUpdates);
@@ -297,14 +398,74 @@ export default {
                 if (!_vendedor) {
                     throw new Error("Vendedor não encontrado.");
                 }
-                await ReservasModel.updateOne(
+                await ReservasModel.findOneAndUpdate(
                     { _id: _reserva._id },
-                    { $set: { vendedor: _vendedor } }
+                    {
+                        $set: {
+                            vendedor: _vendedor,
+                            atualizado_por: {
+                                data_hora: dayjs().toDate(),
+                                // @ts-ignore
+                                usuario: req.usuario
+                            }
+                        }
+                    },
+                    {
+                        new: true
+                    }
                 );
+                // Alterar reserva dentro do lote:
+                let loteUpdates = _reserva.lotes.map(lote => {
+                    return LotesModel.updateOne(
+                        { loteamento_quadra_lote: lote.loteamento_quadra_lote },
+                        { $set: { reserva: _reserva } }
+                    );
+                });
+                await Promise.all(loteUpdates);
                 res.json({ message: "Vendedor da reserva alterado com sucesso." });
                 return;
             }
             else if (req.body.operacao == 'alterar-lote-situacao') {
+
+                let _reserva = await ReservasModel.findById(req.body.reserva_id);
+                if (!_reserva) {
+                    throw new Error("Reserva não encontrada.");
+                }
+                _reserva.atualizado_por = {
+                    data_hora: dayjs().toDate(),
+                    // @ts-ignore
+                    usuario: req.usuario
+                };
+
+                let _lote = await LotesModel.findOne({ loteamento_quadra_lote: req.body.lote_id });
+                if (!_lote) {
+                    throw new Error("Lote não encontrado.");
+                }
+                // Verifica se o lote faz parte da reserva
+                let loteNaReserva = _reserva.lotes.find(l => l.loteamento_quadra_lote === req.body.lote_id);
+                if (!loteNaReserva) {
+                    throw new Error("Lote não faz parte desta reserva.");
+                }
+                // Atualiza a situação do lote
+                _lote.situacao = req.body.nova_situacao;
+                await _lote.save();
+
+                // Verifica todos os lotes da reserva estão vendidos
+                let allLotes = await LotesModel.find({ loteamento_quadra_lote: { $in: _reserva.lotes.map(l => l.loteamento_quadra_lote) } }).lean();
+                let allVendido = allLotes.every(l => l.situacao === 'VENDIDO');
+                if (allVendido) {
+                    _reserva.situacao = RESERVA_SITUACAO.CONCLUIDA;
+                    await _reserva.save();
+                } else {
+                    // Se não, e a reserva estava concluída, volta para ativa
+                    if (_reserva.situacao === RESERVA_SITUACAO.CONCLUIDA) {
+                        _reserva.situacao = RESERVA_SITUACAO.ATIVA;
+                        await _reserva.save();
+                    }
+                }
+
+                res.json({ message: "Situação do lote alterada com sucesso." });
+                return;
             }
             else {
                 throw new Error("Operação não reconhecida.");
@@ -375,7 +536,12 @@ export default {
             let loteUpdates = _lotes.map(lote => {
                 return LotesModel.updateOne(
                     { _id: lote._id },
-                    { $set: { situacao: 'RESERVADO' } }
+                    {
+                        $set: {
+                            situacao: 'RESERVADO',
+                            reserva: reserva
+                        }
+                    }
                 );
             });
             await Promise.all(loteUpdates);

@@ -48,6 +48,7 @@ async function start() {
 start();
 
 function resolveHeaders(req: express.Request, res: express.Response, next: express.NextFunction) {
+    console.log(req.method, req.path);
     let userAgent = req.headers["user-agent"];
     if (userAgent?.includes("Google")) {
         return next();
@@ -108,7 +109,6 @@ function detectFetchAndBody(req: express.Request, res: express.Response, next: e
         const body = req.body;
         if (body && typeof body === 'object') {
             const fetchBody = JSON.stringify(body, null, 2);
-            logDev(`${req.method} | ${req.path}`);
             // logDev(fetchBody);
             const requestSizeInMB = Buffer.byteLength(fetchBody, 'utf8') / (1024 * 1024);
             // logDev('Request size in MB:', requestSizeInMB.toFixed(2));

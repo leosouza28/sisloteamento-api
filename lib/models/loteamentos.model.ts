@@ -13,6 +13,7 @@ const ModelSchema = new mongoose.Schema({
     quantidade_lotes: Number,
     valor_total_lotes: Number,
 
+    status: String,
 
     criado_por: {
         data_hora: Date,
@@ -38,3 +39,8 @@ const ModelSchema = new mongoose.Schema({
 });
 
 export const LoteamentosModel = mongoose.model("loteamentos", ModelSchema);
+
+export const LOTEAMENTO_STATUS = {
+    ATIVO: 'ATIVO',
+    BLOQUEADO: 'BLOQUEADO',
+}

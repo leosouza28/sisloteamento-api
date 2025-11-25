@@ -14,13 +14,37 @@ const ModelSchema = new mongoose.Schema({
         nome: String
     },
     reserva: {
-        data_hora: Date,
-        usuario: {
+        _id: String,
+        codigo_reserva: String,
+        vendedor: {
             _id: String,
             nome: String,
             documento: String
-        }
+        },
+        cliente: {
+            _id: String,
+            nome: String,
+            email: String,
+            data_nascimento: Date,
+            documento: String,
+            sexo: String,
+            telefone_principal: {
+                tipo: String,
+                valor: String
+            },
+            endereco: {
+                cep: String,
+                logradouro: String,
+                numero: String,
+                complemento: String,
+                bairro: String,
+                cidade: String,
+                estado: String,
+            }
+        },
+        situacao: String
     },
+    situacao_csv: String,
     exibivel: Boolean,
 }, {
     timestamps: {

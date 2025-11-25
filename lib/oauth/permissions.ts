@@ -13,6 +13,10 @@ const scopes = {
     // Menu usuarios
     "usuarios.leitura": "Ler usuários",
     "usuarios.editar": "Editar usuários",
+
+    "loteamentos.leitura": "Ler loteamentos",
+    "loteamentos.editar": "Editar loteamentos",
+    
 }
 
 function getAllAvailableScopes(): Scope[] {
