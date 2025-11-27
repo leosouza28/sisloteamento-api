@@ -165,7 +165,7 @@ async function atualizarMapasVirtuais() {
                 });
 
             } catch (error: any) {
-
+                console.log(error);
             }
         }
         console.log("Atualização de mapas virtuais concluída.");
