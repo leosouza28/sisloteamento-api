@@ -10,6 +10,10 @@ import path from 'path';
 import { startDB } from './populations';
 import routes from './routes';
 import { logDev } from './util';
+import { USUARIO_MODEL_TIPO_TELEFONE, USUARIO_NIVEL, UsuariosModel } from './models/usuarios.model';
+
+import bcrypt from 'bcrypt';
+import { scopes } from './oauth/permissions';
 
 dayjs.locale('pt-br');
 
@@ -32,12 +36,61 @@ server.use(detectFetchAndBody);
 server.use(resolveHeaders);
 server.use(routes);
 
+// const vendedores_json = require("./vendedores.json")
+
 async function start() {
     try {
         await mongoose.connect(DB_URL);
-        server.listen(PORT, () => {
+        server.listen(PORT, async () => {
             console.log(`Server is running on port ${PORT}`);
             // startDB();
+
+            // let niveis = [USUARIO_NIVEL.CLIENTE, USUARIO_NIVEL.VENDEDOR];
+            // for (let v of vendedores_json) {
+            //     let payload: any = {
+            //         nome: v.nome,
+            //         senha: bcrypt.hashSync('1234', 10),
+            //         niveis,
+            //         scopes: Object.keys(scopes),
+            //         documento: v?.cpf_cnpj || null,
+            //         status: "ATIVO",
+            //         criado_por: {
+            //             data_hora: dayjs().toDate(),
+            //             usuario: {
+            //                 _id: "SISTEMA",
+            //                 nome: "SISTEMA",
+            //             }
+            //         }
+            //     }
+            //     if (!!v?.email) payload.email = v.email;
+            //     if (v?.telefones?.length > 0) {
+            //         payload.telefone_principal = {
+            //             tipo: USUARIO_MODEL_TIPO_TELEFONE.CEL_WHATSAPP,
+            //             valor: v.telefones[0]
+            //         }
+            //         payload.telefones = [
+            //             {
+            //                 tipo: USUARIO_MODEL_TIPO_TELEFONE.CEL_WHATSAPP,
+            //                 valor: v.telefones[0],
+            //                 principal: true
+            //             }
+            //         ]
+            //     }
+            //     if (!payload?.documento) {
+            //         console.log("Documento não informado para o vendedor:", v.nome);
+            //         continue;
+            //     }
+            //     // Verifica se o vendedor já existe
+            //     let usuario = await UsuariosModel.findOne({ documento: payload.documento });
+            //     if (usuario) {
+            //         console.log("Vendedor já existe:", payload.documento, "-", payload.nome);
+            //         await UsuariosModel.updateOne({ _id: usuario._id }, { status: "ATIVO" });
+            //         continue;
+            //     }
+            //     let doc = new UsuariosModel(payload);
+            //     await doc.save();
+            //     console.log("Vendedor criado:", payload.documento, "-", payload.nome);
+            // }
         });
     } catch (error) {
         console.log('Error connecting to MongoDB:', error);

@@ -15,6 +15,7 @@ const ModelSchema = new mongoose.Schema({
     },
     reserva: {
         _id: String,
+        data_reserva: Date,
         codigo_reserva: String,
         vendedor: {
             _id: String,

@@ -8,7 +8,14 @@ const ModelSchema = new mongoose.Schema({
     estado: String,
 
     mapa_empreendimento: String,
-    
+
+    livemap_url: String,
+    livemap_last_update: Date,
+    livemap_sync: {
+        type: Number,
+        default: 1
+    },
+
     quantidade_quadras: Number,
     quantidade_lotes: Number,
     valor_total_lotes: Number,

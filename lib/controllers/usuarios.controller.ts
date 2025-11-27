@@ -183,7 +183,7 @@ export default {
                 data_nascimento: null,
                 telefone_principal: null,
                 telefones: [],
-                origem_cadastro: "ADMINISTRADOR",
+                origem_cadastro: "CADASTRO_RAPIDO_RESERVA",
                 status: USUARIO_MODEL_STATUS.ATIVO,
                 criado_por: {
                     data_hora: now,
@@ -206,10 +206,8 @@ export default {
                     valor: req.body.telefone
                 }
             }
-            await validarUsuario(payload)
             doc = new UsuariosModel(payload);
             await doc.save();
-
             res.json(doc);
         } catch (error) {
             errorHandler(error, res);
@@ -266,7 +264,23 @@ export default {
                 }
             }
 
-            await validarUsuario(payload);
+            const isEdicao = !!req.body?._id;
+            await validarUsuario(payload, isEdicao);
+
+            // Verificar se o documento já pertence a outro usuário
+            if (payload.documento) {
+                const userComMesmoDoc = await UsuariosModel.findOne({ documento: payload.documento }).lean();
+                if (userComMesmoDoc) {
+                    // Se for edição, verificar se não é o mesmo usuário
+                    if (isEdicao && userComMesmoDoc._id.toString() !== req.body._id.toString()) {
+                        throw new Error("Documento já cadastrado para outro usuário!");
+                    }
+                    // Se for criação, não pode ter documento duplicado
+                    if (!isEdicao) {
+                        throw new Error("Documento já cadastrado!");
+                    }
+                }
+            }
 
             if (payload?.niveis?.includes(USUARIO_NIVEL.ADMIN)) {
                 logDev("Definindo scopes")
@@ -284,17 +298,15 @@ export default {
                     usuario: req.usuario
                 }
                 if (!!req.body?.senha) payload.senha = bcrypt.hashSync(req.body.senha, 10);
-                await UsuariosModel.updateOne({ _id: req.body._id }, {
+                doc = await UsuariosModel.findOneAndUpdate({ _id: req.body._id }, {
                     $set: { ...payload }
-                })
+                }, { new: true });
             } else {
                 payload.criado_por = {
                     data_hora: now,
                     // @ts-ignore
                     usuario: req.usuario
                 }
-                let has_user_doc = await UsuariosModel.findOne({ documento: req.body.documento }).lean();
-                if (has_user_doc) throw new Error("Documento já cadastrado!");
                 payload.origem_cadastro = 'ADM';
                 doc = new UsuariosModel(payload).save()
                 doc = (await doc).toJSON()
@@ -315,10 +327,15 @@ export default {
     }
 }
 
-async function validarUsuario(usuario: any) {
+async function validarUsuario(usuario: any, isEdicao: boolean = false) {
     try {
-        if (!usuario?.documento) throw new Error("Documento é obrigatório!");
-        isValidCPF(usuario.documento)
+        // Validar documento apenas se fornecido, ou se não for edição
+        if (usuario?.documento) {
+            isValidCPF(usuario.documento);
+        } else if (!isEdicao) {
+            throw new Error("Documento é obrigatório!");
+        }
+
         if (!usuario?.nome) throw new Error("Nome é obrigatório!");
         for (let tel of (usuario?.telefones || [])) {
             if (!tel?.valor) throw new Error("Número de telefone é obrigatório!");

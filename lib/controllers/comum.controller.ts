@@ -10,8 +10,179 @@ import { FORMA_PAGAMENTO_STATUS, FormasPagamentosModel } from "../models/formas-
 import { LOTE_SITUACAO, LotesModel } from "../models/lotes.model";
 import { LOTEAMENTO_STATUS, LoteamentosModel } from "../models/loteamentos.model";
 import { RESERVA_SITUACAO, ReservasModel } from "../models/reservas.model";
+import { LoteamentosMapasModel } from "../models/loteamentos-mapa.model";
+import { createCanvas, loadImage, registerFont } from 'canvas';
+
+async function getDashboardClient(loteamento_id: string = '') {
+    // se loteamento_id for fornecido, retorna dashboard específico do loteamento
+    try {
+        let total_loteamentos_ativos = 0,
+            total_lotes_cadastrados = 0,
+            total_lotes_disponiveis = 0,
+            total_lotes_bloqueados = 0,
+            total_lotes_vendidos = 0,
+            total_lotes_reservados = 0,
+            total_reservas = 0,
+            total_reservas_ativas = 0,
+            total_reservas_concluidas = 0,
+            total_vendedores = 0,
+            total_clientes = 0,
+            lista_ultimas_reservas: any[] = [],
+            lista_ultimos_lotes_vendidos: any[] = [],
+            lista_ultimos_lotes_reservados: any[] = [],
+            lista_ultimos_lotes_bloqueados: any[] = [],
+            lista_ultimos_lotes_disponiveis: any[] = [];
+
+        let $match_lotes: any = {
+            'situacao': {
+                $in: [
+                    LOTE_SITUACAO.VENDIDO,
+                    LOTE_SITUACAO.RESERVADO,
+                    LOTE_SITUACAO.DISPONIVEL,
+                    LOTE_SITUACAO.BLOQUEADO
+                ]
+            },
+            'exibivel': true
+        }
+        if (loteamento_id) $match_lotes['loteamento._id'] = loteamento_id;
+
+        let lotes = await LotesModel.aggregate([
+            { $match: $match_lotes },
+            {
+                $group: {
+                    _id: null,
+                    total: { $sum: 1 },
+                    disponiveis: {
+                        $sum: {
+                            $cond: [{ $eq: ["$situacao", LOTE_SITUACAO.DISPONIVEL] }, 1, 0]
+                        }
+                    },
+                    bloqueados: {
+                        $sum: {
+                            $cond: [{ $eq: ["$situacao", LOTE_SITUACAO.BLOQUEADO] }, 1, 0]
+                        }
+                    },
+                    vendidos: {
+                        $sum: {
+                            $cond: [{ $eq: ["$situacao", LOTE_SITUACAO.VENDIDO] }, 1, 0]
+                        }
+                    },
+                    reservados: {
+                        $sum: {
+                            $cond: [{ $eq: ["$situacao", LOTE_SITUACAO.RESERVADO] }, 1, 0]
+                        }
+                    }
+                }
+            }
+        ])
+
+        if (lotes.length) {
+            total_lotes_cadastrados = lotes[0].total;
+            total_lotes_disponiveis = lotes[0].disponiveis;
+            total_lotes_bloqueados = lotes[0].bloqueados;
+            total_lotes_vendidos = lotes[0].vendidos;
+            total_lotes_reservados = lotes[0].reservados;
+        }
+
+        let find_loteamentos: any = { status: LOTEAMENTO_STATUS.ATIVO };
+        if (loteamento_id) {
+            find_loteamentos['_id'] = loteamento_id;
+        }
+        let loteamentos = await LoteamentosModel.find(find_loteamentos).lean();
+        total_loteamentos_ativos = loteamentos.length;
+
+        let find_reservas: any = { situacao: { $in: [RESERVA_SITUACAO.ATIVA, RESERVA_SITUACAO.CONCLUIDA] } };
+        if (loteamento_id) {
+            find_reservas['loteamento._id'] = loteamento_id;
+        }
+
+
+        let find_lotes_vendidos: any = { 'situacao': LOTE_SITUACAO.VENDIDO };
+        let find_lotes_reservados: any = { 'situacao': LOTE_SITUACAO.RESERVADO };
+        let find_lotes_bloqueados: any = { 'situacao': LOTE_SITUACAO.BLOQUEADO };
+        let find_lotes_disponiveis: any = { 'situacao': LOTE_SITUACAO.DISPONIVEL };
+        if (loteamento_id) find_lotes_vendidos['loteamento._id'] = loteamento_id;
+        if (loteamento_id) find_lotes_reservados['loteamento._id'] = loteamento_id;
+        if (loteamento_id) find_lotes_bloqueados['loteamento._id'] = loteamento_id;
+        if (loteamento_id) find_lotes_disponiveis['loteamento._id'] = loteamento_id;
+        total_reservas = await ReservasModel.find(find_reservas).countDocuments();
+        total_reservas_ativas = await ReservasModel.find({ 'situacao': RESERVA_SITUACAO.ATIVA }).countDocuments();
+        total_reservas_concluidas = await ReservasModel.find({ 'situacao': RESERVA_SITUACAO.CONCLUIDA }).countDocuments();
+        lista_ultimas_reservas = await ReservasModel.find(find_reservas).sort({ createdAt: -1 }).lean();
+        lista_ultimos_lotes_vendidos = await LotesModel.find(find_lotes_vendidos).sort({ updatedAt: -1 }).lean();
+        lista_ultimos_lotes_reservados = await LotesModel.find(find_lotes_reservados).sort({ updatedAt: -1 }).lean();
+        lista_ultimos_lotes_bloqueados = await LotesModel.find(find_lotes_bloqueados).sort({ updatedAt: -1 }).lean();
+        lista_ultimos_lotes_disponiveis = await LotesModel.find(find_lotes_disponiveis).sort({ updatedAt: -1 }).lean();
+
+        total_vendedores = await UsuariosModel.find({ niveis: USUARIO_NIVEL.VENDEDOR }).countDocuments();
+        total_clientes = await UsuariosModel.find({ niveis: USUARIO_NIVEL.CLIENTE }).countDocuments();
+        return {
+            total_loteamentos_ativos,
+            total_lotes_cadastrados,
+            total_lotes_disponiveis,
+            total_lotes_vendidos,
+            total_lotes_reservados,
+            total_lotes_bloqueados,
+            total_reservas,
+            total_reservas_ativas,
+            total_reservas_concluidas,
+            total_vendedores,
+            total_clientes,
+            lista_ultimas_reservas,
+            lista_ultimos_lotes_vendidos,
+            lista_ultimos_lotes_reservados,
+            lista_ultimos_lotes_bloqueados,
+            lista_ultimos_lotes_disponiveis
+        };
+    } catch (error) {
+        throw error;
+    }
+}
+
+
 
 export default {
+    getMapaVirtualLoteamento: async (req: Request, res: Response, next: NextFunction) => {
+        try {
+            let id_loteamento = req.params.id_loteamento;
+            if (!id_loteamento) throw new Error("ID do loteamento não informado");
+
+            let loteamento = await LoteamentosModel.findById(id_loteamento);
+            if (!loteamento) throw new Error("Loteamento não encontrado");
+
+            // Retorna a URL do livemap se existir
+            if (loteamento.livemap_url) {
+                return res.json({
+                    url: loteamento.livemap_url,
+                    last_update: loteamento.livemap_last_update
+                });
+            }
+
+            throw new Error("Mapa virtual ainda não foi gerado para este loteamento");
+        } catch (error) {
+            errorHandler(error, res);
+        }
+    },
+    getDashboardPorLoteamento: async (req: Request, res: Response, next: NextFunction) => {
+        try {
+            let loteamento = await LoteamentosModel.findById(req.params.id_loteamento, { nome: 1, cidade: 1, estado: 1 }).lean();
+            let dashboard = await getDashboardClient(req.params.id_loteamento);
+            res.json({
+                loteamento,
+                ...dashboard
+            });
+        } catch (error) {
+            errorHandler(error, res);
+        }
+    },
+    getDashboardClient: async (req: Request, res: Response, next: NextFunction) => {
+        try {
+            let dashboard = await getDashboardClient()
+            res.json(dashboard);
+        } catch (error) {
+            errorHandler(error, res);
+        }
+    },
     admin: {
         getDashboardAdmin: async (req: Request, res: Response, next: NextFunction) => {
             try {
@@ -78,7 +249,7 @@ export default {
                                 const baseName = extensionIndex !== -1 ? fileName.substring(0, extensionIndex) : fileName;
                                 const extension = extensionIndex !== -1 ? fileName.substring(extensionIndex) : '';
                                 fileName = `${baseName}(${counter})${extension}`;
-                                storageFile = storage.file(`imgs/${fileName}`);
+                                storageFile = storage.file(`sisloteamentos/${fileName}`);
                                 counter++;
                             }
                             await storageFile.save(file.data, { metadata: { 'contentType': file.mimetype } });

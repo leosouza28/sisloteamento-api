@@ -16,6 +16,9 @@ const scopes = {
 
     "loteamentos.leitura": "Ler loteamentos",
     "loteamentos.editar": "Editar loteamentos",
+
+    "reservas.leitura": "Ler reservas",
+    "reservas.editar": "Editar reservas",
     
 }
 

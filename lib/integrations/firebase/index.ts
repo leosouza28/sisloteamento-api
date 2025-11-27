@@ -1,7 +1,7 @@
 import { initializeApp, cert, getApps, getApp } from "firebase-admin/app";
 import { getStorage } from "firebase-admin/storage";
 import { logDev } from "../../util";
-import * as serviceAccount from './lsdevelopers-loteamentos-api.json';
+import * as serviceAccount from './chave2.json';
 
 logDev("Apps", getApps().length);
 

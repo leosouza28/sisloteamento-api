@@ -1,0 +1,4025 @@
+[
+  {
+    "_id": {
+      "$oid": "68d195c67a358e1969380882"
+    },
+    "cpf_cnpj": "02581748206",
+    "__v": 0,
+    "all_titulos": [
+      {
+        "_id": "68e53936989aef539b4a9562",
+        "titulo_serie_hash": "000001/000002",
+        "nome_serie": "GOLD",
+        "situacao": "Cancelado",
+        "assinatura": {
+          "$date": "2025-10-07T00:00:00.000Z"
+        },
+        "vencimento": {
+          "$date": "2025-11-07T00:00:00.000Z"
+        },
+        "bloqueado": true
+      }
+    ],
+    "associado_status": "ASSOCIADO SEM PLANO",
+    "clube": {
+      "_id": "68d18e77f0d20fe8813947ff",
+      "nome": "VALE DAS MINAS"
+    },
+    "contratos_resort": [],
+    "created_at": {
+      "$date": "2025-09-22T18:30:30.806Z"
+    },
+    "crm_levels": [],
+    "email": "lsouzaus@gmail.com",
+    "niveis_acesso": [
+      "CLIENTE",
+      "VENDEDOR",
+      "ADMINISTRATIVO"
+    ],
+    "nome": "Leonardo Souza",
+    "numero_telefone_acesso": "91983045923",
+    "perfil": {
+      "permissoes": []
+    },
+    "perfil_v2": {
+      "_id": "68d195c67a358e1969380881",
+      "nome": "ADMINISTRADOR",
+      "scopes": [
+        "*"
+      ]
+    },
+    "status": "ATIVO",
+    "telefones": [
+      "91983045923"
+    ],
+    "updated_at": {
+      "$date": "2025-11-26T12:00:00.581Z"
+    },
+    "user_devices": [
+      {
+        "app_device_id": "device_1762430336500_335176",
+        "app_device_name": "google sdk_gphone64_arm64",
+        "app_device_agent": "Clubee,android,1.0.0",
+        "app_device_last_access": {
+          "$date": "2025-11-06T15:09:53.711Z"
+        },
+        "appEngine": {
+          "user_agent": "Dart/3.9 (dart:io)",
+          "last_request": {
+            "$date": "2025-11-06T15:09:52.618Z"
+          }
+        },
+        "_id": {
+          "$oid": "690cb0c8eaad7f67f225588f"
+        },
+        "app_device_force_disconnect": true
+      },
+      {
+        "app_device_id": "device_1762530806426_493991",
+        "app_device_name": "iPhone (iPhone)",
+        "app_device_agent": "Clubee,ios,1.0.0",
+        "app_device_last_access": {
+          "$date": "2025-11-12T20:45:10.318Z"
+        },
+        "appEngine": {
+          "ip": "181.216.62.189",
+          "city": "castanhal",
+          "region": "pa",
+          "user_agent": "Dart/3.9 (dart:io)",
+          "last_request": {
+            "$date": "2025-11-12T20:45:10.158Z"
+          }
+        },
+        "_id": {
+          "$oid": "6914f1d6c7c50be76dbcaa44"
+        }
+      }
+    ],
+    "veiculos": [
+      "ONIX 2021",
+      "ONIX 2021"
+    ],
+    "criou_senha_acesso": true,
+    "appEngine": {
+      "ip": "2804:d4b:7d12:1d00:1480:bd91:ae14:4072",
+      "city": "belem",
+      "region": "pa",
+      "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+      "last_request": {
+        "$date": "2025-11-25T20:47:57.308Z"
+      },
+      "method": "GET",
+      "endpoint": "/v3/admin/configuracoes/perfis"
+    },
+    "atualizado_por": {
+      "_id": "68d195c67a358e1969380882",
+      "cpf_cnpj": "02581748206",
+      "nome": "Leonardo Souza"
+    },
+    "cartao_credito": "SIM",
+    "cheque": "SIM",
+    "data_nascimento": "1995-11-28",
+    "data_nascimento_date": {
+      "$date": "1995-11-28T00:00:00.000Z"
+    },
+    "email_secundario": "leonardo.souza28@hotmail.com",
+    "endereco_primario": {
+      "cep": "68743250",
+      "logradouro": "Rua Kazuma Oyama",
+      "numero": "2577",
+      "complemento": "Casa 47",
+      "bairro": "Estrela",
+      "cidade": "CASTANHAL",
+      "estado": "PA"
+    },
+    "estado_civil": "UNIAO ESTAVEL",
+    "filhos": "SIM, 1 FILHO",
+    "genero": "MASCULINO",
+    "imovel": "SIM",
+    "profissao": "PROGRAMADOR JAVASCRIPT",
+    "renda_familiar": "10.000 A 15.000 REAIS",
+    "rg": "6913497",
+    "tipo_documento": "cpf",
+    "profile_image_public": "https://storage.googleapis.com/valedasminasapp.firebasestorage.app/files-v3%2Fprofile_image.jpg",
+    "senha": "$2b$10$YsyR/m1RcTUHJwftMIaJ2Ow8ywHULaTKesQNT21V3WJGF9aV002c2",
+    "qcscore_conceito": "A",
+    "qcscore_data_consulta": {
+      "$date": "2025-10-02T18:53:41.131Z"
+    },
+    "qcscore_legenda": "Excelente perfil cadastral. Recomenda-se apostar no cliente",
+    "ultimo_acesso_via_codigo": {
+      "$date": "2025-11-12T18:39:12.311Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68dd701d73849bb8e4ab5295"
+    },
+    "nome": "Renan Ribeiro",
+    "tipo_documento": "cpf",
+    "cpf_cnpj": "73634700149",
+    "email": "rennan@gruporesolvedor.com.br",
+    "email_secundario": "rennan@gruporesolvedor.com.br",
+    "telefones": [
+      "11989264271"
+    ],
+    "rg": "4955324",
+    "endereco_primario": {
+      "cep": "77015298",
+      "logradouro": "Quadra ARSO 23 Alameda 5",
+      "numero": "4",
+      "complemento": "",
+      "bairro": "Plano Diretor Sul",
+      "cidade": "PALMAS",
+      "estado": "TO"
+    },
+    "criou_senha_acesso": true,
+    "criou_conta_operador": true,
+    "lead_primeira_captura": {
+      "criou_conta": true,
+      "data_hora": {
+        "$date": "2025-10-01T18:17:01.295Z"
+      },
+      "capturado_por": {
+        "_id": "68d195c67a358e1969380882",
+        "nome": "Leonardo Souza",
+        "cpf_cnpj": "02581748206"
+      }
+    },
+    "contratos_resort": [],
+    "data_nascimento": "1985-03-28",
+    "data_nascimento_date": {
+      "$date": "1985-03-28T00:00:00.000Z"
+    },
+    "estado_civil": "CASADO",
+    "renda_familiar": "",
+    "genero": "MASCULINO",
+    "profissao": "",
+    "filhos": "",
+    "imovel": "",
+    "cartao_credito": "",
+    "cheque": "",
+    "veiculos": [],
+    "capturado_por": {
+      "_id": "68d195c67a358e1969380882",
+      "nome": "Leonardo Souza",
+      "cpf_cnpj": "02581748206",
+      "numero_telefone_acesso": "91983045923"
+    },
+    "perfil": {
+      "permissoes": []
+    },
+    "perfil_v2": {
+      "_id": "68d195c67a358e1969380881",
+      "nome": "ADMINISTRADOR",
+      "scopes": [
+        "*"
+      ]
+    },
+    "crm_levels": [],
+    "senha": "$2b$10$KmiGugN8FajHUOXWm5VHQ.zADjPfGSGFQSx0/aqQRge3j9eUPIdf.",
+    "numero_telefone_acesso": "11989264271",
+    "clube": {
+      "_id": "68d18e77f0d20fe8813947ff",
+      "nome": "VALE DAS MINAS"
+    },
+    "status": "ATIVO",
+    "niveis_acesso": [
+      "CLIENTE",
+      "VENDEDOR",
+      "ADMINISTRATIVO"
+    ],
+    "associado_status": "NAO ASSOCIADO",
+    "user_devices": [],
+    "all_titulos": [],
+    "created_at": {
+      "$date": "2025-10-01T18:17:01.297Z"
+    },
+    "updated_at": {
+      "$date": "2025-11-26T12:00:01.710Z"
+    },
+    "__v": 0,
+    "atualizado_por": {
+      "_id": "68dd701d73849bb8e4ab5295",
+      "nome": "Renan Ribeiro",
+      "cpf_cnpj": "73634700149"
+    },
+    "ultimo_contato_horario": {
+      "$date": "2025-10-01T18:17:38.099Z"
+    },
+    "ultimo_contato_usuario": {
+      "_id": "68d195c67a358e1969380882",
+      "cpf_cnpj": "02581748206",
+      "nome": "Leonardo Souza",
+      "numero_telefone_acesso": "91983045923"
+    },
+    "appEngine": {
+      "ip": "2804:7f0:bc00:8028:e3e6:676:cb13:2fa0",
+      "city": "sao paulo",
+      "region": "sp",
+      "user_agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36 EdgA/141.0.0.0",
+      "last_request": {
+        "$date": "2025-11-10T12:15:08.905Z"
+      },
+      "method": "GET",
+      "endpoint": "/v3/admin/dashboard"
+    },
+    "qcscore_conceito": "B",
+    "qcscore_data_consulta": {
+      "$date": "2025-10-02T20:38:13.711Z"
+    },
+    "qcscore_legenda": "Costuma apresentar inadimplência baixa",
+    "profile_image_public": "https://storage.googleapis.com/valedasminasapp.firebasestorage.app/files-v3%2F68dd701d73849bb8e4ab5295.png"
+  },
+  {
+    "_id": {
+      "$oid": "68dea9abda9325a10d7ec15d"
+    },
+    "nome": "Vinicius Correa Brasil",
+    "tipo_documento": "cpf",
+    "cpf_cnpj": "04354465256",
+    "email": "viniciuscb03@gmail.com",
+    "email_secundario": "viniciuscb03@gmail.com",
+    "telefones": [
+      "91981294373"
+    ],
+    "rg": "7233480",
+    "endereco_primario": {
+      "cep": "68744140",
+      "logradouro": "Alameda Liberdade",
+      "numero": "613",
+      "complemento": "",
+      "bairro": "São José",
+      "cidade": "CASTANHAL",
+      "estado": "PA"
+    },
+    "criou_senha_acesso": true,
+    "criou_conta_operador": true,
+    "lead_primeira_captura": {
+      "criou_conta": true,
+      "data_hora": {
+        "$date": "2025-10-02T16:34:51.185Z"
+      },
+      "capturado_por": {
+        "_id": "68d195c67a358e1969380882",
+        "nome": "Leonardo Souza",
+        "cpf_cnpj": "02581748206"
+      }
+    },
+    "contratos_resort": [],
+    "data_nascimento": "30/12/1998",
+    "data_nascimento_date": {
+      "$date": "1998-12-30T00:00:00.000Z"
+    },
+    "estado_civil": "SOLTEIRO",
+    "renda_familiar": "",
+    "genero": "MASCULINO",
+    "profissao": "",
+    "filhos": "",
+    "imovel": "",
+    "cartao_credito": "",
+    "cheque": "",
+    "veiculos": [],
+    "capturado_por": {
+      "_id": "68d195c67a358e1969380882",
+      "nome": "Leonardo Souza",
+      "cpf_cnpj": "02581748206",
+      "numero_telefone_acesso": "91983045923"
+    },
+    "perfil": {
+      "permissoes": []
+    },
+    "perfil_v2": {
+      "_id": "68d195c67a358e1969380881",
+      "nome": "ADMINISTRADOR",
+      "scopes": [
+        "*"
+      ]
+    },
+    "crm_levels": [],
+    "senha": "$2b$10$q9z9rIafDjnH1MvDsFXqd.4uX.bwr2.9p0hVxdcoBDdIHlPr7qSaW",
+    "numero_telefone_acesso": "91981294373",
+    "clube": {
+      "_id": "68d18e77f0d20fe8813947ff",
+      "nome": "VALE DAS MINAS"
+    },
+    "status": "ATIVO",
+    "niveis_acesso": [
+      "CLIENTE",
+      "VENDEDOR",
+      "ADMINISTRATIVO"
+    ],
+    "associado_status": "NAO ASSOCIADO",
+    "user_devices": [],
+    "all_titulos": [],
+    "created_at": {
+      "$date": "2025-10-02T16:34:51.194Z"
+    },
+    "updated_at": {
+      "$date": "2025-11-26T17:04:31.601Z"
+    },
+    "__v": 0,
+    "atualizado_por": {
+      "_id": "68d195c67a358e1969380882",
+      "cpf_cnpj": "02581748206",
+      "nome": "Leonardo Souza"
+    },
+    "ultima_alteracao_senha": {
+      "$date": "2025-10-02T16:35:19.248Z"
+    },
+    "profile_image_public": "https://storage.googleapis.com/valedasminasapp.firebasestorage.app/files-v3%2F68dea9abda9325a10d7ec15d.png",
+    "qcscore_conceito": "E",
+    "qcscore_data_consulta": {
+      "$date": "2025-11-13T17:59:44.678Z"
+    },
+    "qcscore_legenda": "Costuma apresentar inadimplência elevada",
+    "appEngine": {
+      "ip": "170.239.202.244",
+      "city": "parauapebas",
+      "region": "pa",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+      "last_request": {
+        "$date": "2025-11-26T17:04:31.541Z"
+      },
+      "method": "GET",
+      "endpoint": "/v3/admin/titulos/cortesias-geradas"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68dee2160ca3c6894a9a0bc9"
+    },
+    "nome": "Fernanda Magalhaes",
+    "tipo_documento": "cpf",
+    "cpf_cnpj": "01528730232",
+    "email": "fernanda@dreamsconsult.com",
+    "telefones": [
+      "91983444342"
+    ],
+    "rg": "5483002",
+    "endereco_primario": {
+      "cep": "68742755",
+      "logradouro": "Travessa Cônego Luís Leitão",
+      "numero": "2409",
+      "complemento": "Apto 1601",
+      "bairro": "Estrela",
+      "cidade": "CASTANHAL",
+      "estado": "PA"
+    },
+    "criou_senha_acesso": true,
+    "criou_conta_site": false,
+    "criou_conta_app": false,
+    "criou_conta_operador": true,
+    "lead_primeira_captura": {
+      "criou_conta": true,
+      "data_hora": {
+        "$date": "2025-10-02T20:35:34.095Z"
+      },
+      "capturado_por": {
+        "_id": "68dd701d73849bb8e4ab5295",
+        "nome": "Renan Ribeiro",
+        "cpf_cnpj": "73634700149"
+      }
+    },
+    "contratos_resort": [],
+    "data_nascimento": "30/04/1993",
+    "data_nascimento_date": {
+      "$date": "1993-04-30T00:00:00.000Z"
+    },
+    "origem": "Evento de Lançamento",
+    "estado_civil": "CASADO",
+    "genero": "FEMININO",
+    "veiculos": [],
+    "master": false,
+    "perfil": {
+      "permissoes": []
+    },
+    "perfil_v2": {
+      "_id": "68d195c67a358e1969380881",
+      "nome": "ADMINISTRADOR",
+      "scopes": [
+        "*"
+      ]
+    },
+    "crm_levels": [],
+    "senha": "$2b$10$2hxPiyKz01ZZ0Ke5gwqhT.FLd0YeW17tAQf01Un3F0y3EmxZjwK3q",
+    "numero_telefone_acesso": "91983444342",
+    "clube": {
+      "_id": "68d18e77f0d20fe8813947ff",
+      "nome": "VALE DAS MINAS"
+    },
+    "criado_por": {
+      "_id": "68dd701d73849bb8e4ab5295",
+      "nome": "Renan Ribeiro",
+      "cpf_cnpj": "73634700149"
+    },
+    "status": "ATIVO",
+    "niveis_acesso": [
+      "CLIENTE",
+      "VENDEDOR",
+      "ADMINISTRATIVO"
+    ],
+    "associado_status": "ASSOCIADO PENDENTE",
+    "user_devices": [],
+    "all_titulos": [
+      {
+        "_id": "68e44b176136329c58f16426",
+        "titulo_serie_hash": "000019/000001",
+        "nome_serie": "REMIDO ESMERALDA",
+        "situacao": "Pendente",
+        "assinatura": {
+          "$date": "2025-10-03T00:00:00.000Z"
+        },
+        "vencimento": {
+          "$date": "2035-10-03T00:00:00.000Z"
+        },
+        "bloqueado": true
+      }
+    ],
+    "created_at": {
+      "$date": "2025-10-02T20:35:34.417Z"
+    },
+    "updated_at": {
+      "$date": "2025-11-26T12:00:00.580Z"
+    },
+    "__v": 0,
+    "atualizado_por": {
+      "_id": "68d195c67a358e1969380882",
+      "cpf_cnpj": "02581748206",
+      "nome": "Leonardo Souza"
+    },
+    "cartao_credito": "",
+    "cheque": "",
+    "email_secundario": "",
+    "filhos": "",
+    "imovel": "",
+    "profissao": "",
+    "renda_familiar": "",
+    "qcscore_conceito": "A",
+    "qcscore_data_consulta": {
+      "$date": "2025-10-02T22:07:23.629Z"
+    },
+    "qcscore_legenda": "Excelente perfil cadastral. Recomenda-se apostar no cliente",
+    "notificacao_cobranca_data": {
+      "$date": "2025-11-12T13:51:34.520Z"
+    },
+    "ultima_alteracao_senha": {
+      "$date": "2025-11-24T15:16:33.976Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68dfba60bf66e8d3245d4837"
+    },
+    "nome": "Corretor de Teste",
+    "tipo_documento": "cpf",
+    "cpf_cnpj": "28266337080",
+    "email": "",
+    "email_secundario": "",
+    "telefones": [
+      "91983045923"
+    ],
+    "rg": "",
+    "endereco_primario": {
+      "cep": "",
+      "logradouro": "",
+      "numero": "",
+      "complemento": "",
+      "bairro": "",
+      "cidade": "",
+      "estado": ""
+    },
+    "contratos_resort": [],
+    "data_nascimento": "",
+    "estado_civil": "",
+    "renda_familiar": "",
+    "genero": "",
+    "profissao": "",
+    "filhos": "",
+    "imovel": "",
+    "cartao_credito": "",
+    "cheque": "",
+    "veiculos": [],
+    "capturado_por": {
+      "_id": "68d195c67a358e1969380882",
+      "nome": "Leonardo Souza",
+      "cpf_cnpj": "02581748206",
+      "numero_telefone_acesso": "91983045923"
+    },
+    "perfil": {
+      "permissoes": []
+    },
+    "perfil_v2": {
+      "_id": "68dfb949bf66e8d3245d4741",
+      "nome": "VENDEDOR",
+      "scopes": [
+        "usuarios.leitura_limitada_vendedor",
+        "usuarios.editar",
+        "vendas.leitura_limitada_vendedor",
+        "titulos.leitura_limitada_vendedor"
+      ]
+    },
+    "crm_levels": [],
+    "clube": {
+      "_id": "68d18e77f0d20fe8813947ff",
+      "nome": "VALE DAS MINAS"
+    },
+    "status": "ATIVO",
+    "niveis_acesso": [
+      "CLIENTE",
+      "VENDEDOR",
+      "ADMINISTRATIVO"
+    ],
+    "associado_status": "NAO ASSOCIADO",
+    "user_devices": [],
+    "all_titulos": [],
+    "created_at": {
+      "$date": "2025-10-03T11:58:24.447Z"
+    },
+    "updated_at": {
+      "$date": "2025-11-26T12:00:01.710Z"
+    },
+    "__v": 0,
+    "atualizado_por": {
+      "_id": "68d195c67a358e1969380882",
+      "cpf_cnpj": "02581748206",
+      "nome": "Leonardo Souza"
+    },
+    "ultima_alteracao_senha": {
+      "$date": "2025-10-03T11:59:42.849Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68e02749e450ecfe06173867"
+    },
+    "nome": "THARSYO HEITOR SOARES AGUIAR",
+    "tipo_documento": "cpf",
+    "cpf_cnpj": "92887937200",
+    "email": "aguiar.tharsyo@gmail.com",
+    "email_secundario": "aguiar.tharsyo@gmail.com",
+    "telefones": [
+      "91989604662"
+    ],
+    "rg": "4436290",
+    "endereco_primario": {
+      "cep": "66615005",
+      "logradouro": "Avenida Tavares Bastos",
+      "numero": "672",
+      "complemento": "",
+      "bairro": "Marambaia",
+      "cidade": "BELÉM",
+      "estado": "PA"
+    },
+    "contratos_resort": [],
+    "data_nascimento": "1986-07-23",
+    "estado_civil": "CASADO",
+    "renda_familiar": "",
+    "genero": "MASCULINO",
+    "profissao": "",
+    "filhos": "",
+    "imovel": "",
+    "cartao_credito": "",
+    "cheque": "",
+    "veiculos": [],
+    "capturado_por": {
+      "_id": "68dd701d73849bb8e4ab5295",
+      "nome": "Renan Ribeiro",
+      "cpf_cnpj": "73634700149",
+      "numero_telefone_acesso": "11989264271"
+    },
+    "perfil": {
+      "permissoes": []
+    },
+    "perfil_v2": {
+      "_id": "68dfb949bf66e8d3245d4741",
+      "nome": "VENDEDOR",
+      "scopes": [
+        "usuarios.leitura_limitada_vendedor",
+        "usuarios.editar",
+        "vendas.leitura_limitada_vendedor",
+        "titulos.leitura_limitada_vendedor"
+      ]
+    },
+    "crm_levels": [],
+    "numero_telefone_acesso": "91989604662",
+    "clube": {
+      "_id": "68d18e77f0d20fe8813947ff",
+      "nome": "VALE DAS MINAS"
+    },
+    "status": "ATIVO",
+    "niveis_acesso": [
+      "CLIENTE",
+      "VENDEDOR",
+      "ADMINISTRATIVO"
+    ],
+    "associado_status": "ASSOCIADO PENDENTE",
+    "qcscore_data_consulta": {
+      "$date": "2025-11-03T12:47:15.278Z"
+    },
+    "user_devices": [],
+    "all_titulos": [
+      {
+        "_id": "6908f3216fd14c714e385c58",
+        "titulo_serie_hash": "000180/000001",
+        "nome_serie": "REMIDO ESMERALDA",
+        "situacao": "Pendente",
+        "assinatura": {
+          "$date": "2025-10-31T00:00:00.000Z"
+        },
+        "vencimento": {
+          "$date": "2035-10-31T00:00:00.000Z"
+        },
+        "bloqueado": true
+      }
+    ],
+    "created_at": {
+      "$date": "2025-10-03T19:43:05.793Z"
+    },
+    "updated_at": {
+      "$date": "2025-11-26T12:00:00.586Z"
+    },
+    "__v": 0,
+    "atualizado_por": {
+      "_id": "68dfcf99bf66e8d3245d53cb",
+      "nome": "Clistefanni Macedo Candido",
+      "cpf_cnpj": "05535219185"
+    },
+    "criou_senha_acesso": true,
+    "data_nascimento_date": {
+      "$date": "1986-07-23T00:00:00.000Z"
+    },
+    "ultima_alteracao_senha": {
+      "$date": "2025-10-16T12:44:36.721Z"
+    },
+    "senha": "$2b$10$RaFfuOVkjoS3Ncnfq4xTyeb1RBadWzFflRtSksnKtOWBKvK4LzFQW",
+    "appEngine": {
+      "ip": "186.0.150.25",
+      "city": "parauapebas",
+      "region": "pa",
+      "user_agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Mobile Safari/537.36",
+      "last_request": {
+        "$date": "2025-11-15T23:02:26.843Z"
+      },
+      "method": "GET",
+      "endpoint": "/v3/admin/dashboard"
+    },
+    "qcscore_conceito": "A",
+    "qcscore_legenda": "Excelente perfil cadastral. Recomenda-se apostar no cliente"
+  },
+  {
+    "_id": {
+      "$oid": "68e0310629b3e854212beca9"
+    },
+    "nome": "ADRIELLI GESSICA OLIVEIRA",
+    "cpf_cnpj": "00604914261",
+    "telefones": [
+      "91982707697"
+    ],
+    "criou_senha_acesso": true,
+    "contratos_resort": [],
+    "veiculos": [],
+    "perfil": {
+      "permissoes": []
+    },
+    "perfil_v2": {
+      "_id": "68dfb949bf66e8d3245d4741",
+      "nome": "VENDEDOR",
+      "scopes": [
+        "usuarios.leitura_limitada_vendedor",
+        "usuarios.editar",
+        "vendas.leitura_limitada_vendedor",
+        "titulos.leitura_limitada_vendedor"
+      ]
+    },
+    "crm_levels": [],
+    "senha": "$2b$10$k0xw/3qXDYogdtq97M4zguwOwM.C.sEUfZAWtBRXWgJSzRhuGKuQC",
+    "numero_telefone_acesso": "91982707697",
+    "clube": {
+      "_id": "68d18e77f0d20fe8813947ff",
+      "nome": "VALE DAS MINAS"
+    },
+    "status": "ATIVO",
+    "niveis_acesso": [
+      "VENDEDOR",
+      "CLIENTE",
+      "ADMINISTRATIVO"
+    ],
+    "associado_status": "NAO ASSOCIADO",
+    "user_devices": [],
+    "all_titulos": [],
+    "created_at": {
+      "$date": "2025-10-03T20:24:38.814Z"
+    },
+    "updated_at": {
+      "$date": "2025-11-26T12:00:01.710Z"
+    },
+    "__v": 0,
+    "appEngine": {
+      "ip": "2804:214:81b7:748c:1:1:2b13:c91",
+      "city": "belem",
+      "region": "pa",
+      "user_agent": "Mozilla/5.0 (Linux; Android 15; 25028PC03G Build/AP3A.240905.015.A2; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/140.0.7339.208 Mobile Safari/537.36",
+      "last_request": {
+        "$date": "2025-10-16T20:31:27.910Z"
+      },
+      "method": "GET",
+      "endpoint": "/v3/admin/usuarios/usuario/documento"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68e0310729b3e854212becac"
+    },
+    "nome": "CARLOS FELIPE DO NASCIMENTO SILVA",
+    "cpf_cnpj": "04873226228",
+    "telefones": [
+      "91982317213"
+    ],
+    "criou_senha_acesso": true,
+    "contratos_resort": [],
+    "veiculos": [],
+    "perfil": {
+      "permissoes": []
+    },
+    "perfil_v2": {
+      "_id": "68dfb949bf66e8d3245d4741",
+      "nome": "VENDEDOR",
+      "scopes": [
+        "usuarios.leitura_limitada_vendedor",
+        "usuarios.editar",
+        "vendas.leitura_limitada_vendedor",
+        "titulos.leitura_limitada_vendedor"
+      ]
+    },
+    "crm_levels": [],
+    "senha": "$2b$10$Ckdcnra7Z.6cUwKKFrNgTeSl.lQCbiuHsP8DxTHJ7hgBhs2MkjTG6",
+    "numero_telefone_acesso": "91982317213",
+    "clube": {
+      "_id": "68d18e77f0d20fe8813947ff",
+      "nome": "VALE DAS MINAS"
+    },
+    "status": "ATIVO",
+    "niveis_acesso": [
+      "VENDEDOR",
+      "CLIENTE",
+      "ADMINISTRATIVO"
+    ],
+    "associado_status": "NAO ASSOCIADO",
+    "user_devices": [],
+    "all_titulos": [],
+    "created_at": {
+      "$date": "2025-10-03T20:24:39.260Z"
+    },
+    "updated_at": {
+      "$date": "2025-11-26T12:00:01.710Z"
+    },
+    "__v": 0,
+    "appEngine": {
+      "ip": "170.239.202.244",
+      "city": "parauapebas",
+      "region": "pa",
+      "user_agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Mobile Safari/537.36",
+      "last_request": {
+        "$date": "2025-11-20T13:07:14.744Z"
+      },
+      "method": "GET",
+      "endpoint": "/v3/admin/vendas"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68e0310729b3e854212becaf"
+    },
+    "nome": "ERINALDO BARROS DA SILVA",
+    "cpf_cnpj": "27151790813",
+    "telefones": [
+      "91985508229"
+    ],
+    "criou_senha_acesso": true,
+    "contratos_resort": [],
+    "veiculos": [],
+    "perfil": {
+      "permissoes": []
+    },
+    "perfil_v2": {
+      "_id": "68dfb949bf66e8d3245d4741",
+      "nome": "VENDEDOR",
+      "scopes": [
+        "usuarios.leitura_limitada_vendedor",
+        "usuarios.editar",
+        "vendas.leitura_limitada_vendedor",
+        "titulos.leitura_limitada_vendedor"
+      ]
+    },
+    "crm_levels": [],
+    "senha": "$2b$10$vBVZSFEeMj4lyDO8c73VEOWqb2xZauH5J.spOgYZLYIR1n3pTy7zO",
+    "numero_telefone_acesso": "91985508229",
+    "clube": {
+      "_id": "68d18e77f0d20fe8813947ff",
+      "nome": "VALE DAS MINAS"
+    },
+    "status": "ATIVO",
+    "niveis_acesso": [
+      "VENDEDOR",
+      "CLIENTE",
+      "ADMINISTRATIVO"
+    ],
+    "associado_status": "NAO ASSOCIADO",
+    "user_devices": [],
+    "all_titulos": [],
+    "created_at": {
+      "$date": "2025-10-03T20:24:39.711Z"
+    },
+    "updated_at": {
+      "$date": "2025-11-26T12:00:01.710Z"
+    },
+    "__v": 0,
+    "appEngine": {
+      "ip": "2804:20fc:375:8600:6551:86f7:af74:81ef",
+      "city": "parauapebas",
+      "region": "pa",
+      "user_agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Mobile Safari/537.36",
+      "last_request": {
+        "$date": "2025-10-26T10:16:03.381Z"
+      },
+      "method": "GET",
+      "endpoint": "/v3/admin/dashboard"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68e0310829b3e854212becb3"
+    },
+    "nome": "ALISON LUCAS PEREIRA DE SOUZA",
+    "cpf_cnpj": "11059143488",
+    "telefones": [],
+    "criou_senha_acesso": true,
+    "contratos_resort": [],
+    "veiculos": [],
+    "perfil": {
+      "permissoes": []
+    },
+    "perfil_v2": {
+      "_id": "68dfb949bf66e8d3245d4741",
+      "nome": "VENDEDOR",
+      "scopes": [
+        "usuarios.leitura_limitada_vendedor",
+        "usuarios.editar",
+        "vendas.leitura_limitada_vendedor",
+        "titulos.leitura_limitada_vendedor"
+      ]
+    },
+    "crm_levels": [],
+    "senha": "$2b$10$LFEjutJwDLDsMKRwUKdA3.gaX4sxl0AxpTu2cRqihTr9WIaRxIsoC",
+    "clube": {
+      "_id": "68d18e77f0d20fe8813947ff",
+      "nome": "VALE DAS MINAS"
+    },
+    "status": "ATIVO",
+    "niveis_acesso": [
+      "VENDEDOR",
+      "CLIENTE",
+      "ADMINISTRATIVO"
+    ],
+    "associado_status": "NAO ASSOCIADO",
+    "user_devices": [],
+    "all_titulos": [],
+    "created_at": {
+      "$date": "2025-10-03T20:24:40.444Z"
+    },
+    "updated_at": {
+      "$date": "2025-11-26T12:00:01.710Z"
+    },
+    "__v": 0,
+    "appEngine": {
+      "ip": "170.239.202.244",
+      "city": "parauapebas",
+      "region": "pa",
+      "user_agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Mobile Safari/537.36",
+      "last_request": {
+        "$date": "2025-10-31T22:13:52.418Z"
+      },
+      "method": "GET",
+      "endpoint": "/v3/admin/vendas"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68e0310829b3e854212becb6"
+    },
+    "nome": "WESLEY JHONNY DUARTE DA SILVA",
+    "cpf_cnpj": "00092512275",
+    "telefones": [
+      "91982968039"
+    ],
+    "criou_senha_acesso": true,
+    "contratos_resort": [],
+    "veiculos": [],
+    "perfil": {
+      "permissoes": []
+    },
+    "perfil_v2": {
+      "_id": "68dfb949bf66e8d3245d4741",
+      "nome": "VENDEDOR",
+      "scopes": [
+        "usuarios.leitura_limitada_vendedor",
+        "usuarios.editar",
+        "vendas.leitura_limitada_vendedor",
+        "titulos.leitura_limitada_vendedor"
+      ]
+    },
+    "crm_levels": [],
+    "senha": "$2b$10$DBeFAC9im7XfzZ.3jxHvu.eMsyK3dCY8U.k2cvm5F9V1ZCtkgIT4u",
+    "numero_telefone_acesso": "91982968039",
+    "clube": {
+      "_id": "68d18e77f0d20fe8813947ff",
+      "nome": "VALE DAS MINAS"
+    },
+    "status": "ATIVO",
+    "niveis_acesso": [
+      "CLIENTE",
+      "VENDEDOR",
+      "ADMINISTRATIVO"
+    ],
+    "associado_status": "ASSOCIADO PENDENTE",
+    "user_devices": [],
+    "all_titulos": [
+      {
+        "_id": "690911886fd14c714e3873c4",
+        "titulo_serie_hash": "000186/000001",
+        "nome_serie": "REMIDO ESMERALDA",
+        "situacao": "Pendente",
+        "assinatura": {
+          "$date": "2025-10-31T00:00:00.000Z"
+        },
+        "vencimento": {
+          "$date": "2035-10-31T00:00:00.000Z"
+        },
+        "bloqueado": true
+      }
+    ],
+    "created_at": {
+      "$date": "2025-10-03T20:24:40.900Z"
+    },
+    "updated_at": {
+      "$date": "2025-11-26T14:19:08.725Z"
+    },
+    "__v": 0,
+    "appEngine": {
+      "ip": "177.75.238.130",
+      "city": "parauapebas",
+      "region": "pa",
+      "user_agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Mobile Safari/537.36",
+      "last_request": {
+        "$date": "2025-11-26T14:19:08.635Z"
+      },
+      "method": "GET",
+      "endpoint": "/v3/admin/comum/default-values"
+    },
+    "atualizado_por": {
+      "_id": "68dfcf99bf66e8d3245d53cb",
+      "nome": "Clistefanni Macedo Candido",
+      "cpf_cnpj": "05535219185"
+    },
+    "cartao_credito": "",
+    "cheque": "",
+    "data_nascimento": "1987-07-30",
+    "email": "wellesduartegt@gmail.com",
+    "email_secundario": "",
+    "endereco_primario": {
+      "cep": "68742150",
+      "logradouro": "Rua Nazaré",
+      "numero": "125",
+      "complemento": "",
+      "bairro": "Nova Olinda",
+      "cidade": "CASTANHAL",
+      "estado": "PA"
+    },
+    "estado_civil": "SOLTEIRO",
+    "filhos": "",
+    "genero": "MASCULINO",
+    "imovel": "",
+    "profissao": "",
+    "renda_familiar": "",
+    "rg": "5647586",
+    "tipo_documento": "cpf",
+    "ultima_alteracao_senha": {
+      "$date": "2025-10-09T17:34:17.506Z"
+    },
+    "qcscore_conceito": "E",
+    "qcscore_data_consulta": {
+      "$date": "2025-10-09T17:32:58.961Z"
+    },
+    "qcscore_legenda": "Costuma apresentar inadimplência elevada",
+    "data_nascimento_date": {
+      "$date": "1987-07-30T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68e0310929b3e854212becb9"
+    },
+    "nome": "JÉSSICA NOGUEIRA XAVIER",
+    "cpf_cnpj": "02156897204",
+    "telefones": [
+      "91980149145"
+    ],
+    "criou_senha_acesso": true,
+    "contratos_resort": [],
+    "veiculos": [],
+    "perfil": {
+      "permissoes": []
+    },
+    "perfil_v2": {
+      "_id": "68dfb949bf66e8d3245d4741",
+      "nome": "VENDEDOR",
+      "scopes": [
+        "usuarios.leitura_limitada_vendedor",
+        "usuarios.editar",
+        "vendas.leitura_limitada_vendedor",
+        "titulos.leitura_limitada_vendedor"
+      ]
+    },
+    "crm_levels": [],
+    "senha": "$2b$10$6k1MFjnhWMm5n0QVsdAfDuiDwuGUi5BU/mweZZNw3U8.W7Wmgnz4W",
+    "numero_telefone_acesso": "91980149145",
+    "clube": {
+      "_id": "68d18e77f0d20fe8813947ff",
+      "nome": "VALE DAS MINAS"
+    },
+    "status": "ATIVO",
+    "niveis_acesso": [
+      "VENDEDOR",
+      "CLIENTE",
+      "ADMINISTRATIVO"
+    ],
+    "associado_status": "NAO ASSOCIADO",
+    "user_devices": [],
+    "all_titulos": [],
+    "created_at": {
+      "$date": "2025-10-03T20:24:41.360Z"
+    },
+    "updated_at": {
+      "$date": "2025-11-26T12:00:01.710Z"
+    },
+    "__v": 0,
+    "appEngine": {
+      "ip": "170.239.202.244",
+      "city": "parauapebas",
+      "region": "pa",
+      "user_agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Mobile Safari/537.36",
+      "last_request": {
+        "$date": "2025-10-20T18:30:08.654Z"
+      },
+      "method": "GET",
+      "endpoint": "/v3/admin/dashboard"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68e0310929b3e854212becbc"
+    },
+    "nome": "VANDA MARIA BISPO DOS SANTOS",
+    "cpf_cnpj": "15720829253",
+    "telefones": [
+      "94992116272"
+    ],
+    "criou_senha_acesso": true,
+    "contratos_resort": [],
+    "veiculos": [],
+    "perfil": {
+      "permissoes": []
+    },
+    "perfil_v2": {
+      "_id": "68dfb949bf66e8d3245d4741",
+      "nome": "VENDEDOR",
+      "scopes": [
+        "usuarios.leitura_limitada_vendedor",
+        "usuarios.editar",
+        "vendas.leitura_limitada_vendedor",
+        "titulos.leitura_limitada_vendedor"
+      ]
+    },
+    "crm_levels": [],
+    "senha": "$2b$10$niO9WOnx5fjsjgQ/VXrKdu9DV7VSGvMufAcoTKtomAuJAIlKqvu2m",
+    "numero_telefone_acesso": "94992116272",
+    "clube": {
+      "_id": "68d18e77f0d20fe8813947ff",
+      "nome": "VALE DAS MINAS"
+    },
+    "status": "ATIVO",
+    "niveis_acesso": [
+      "VENDEDOR",
+      "CLIENTE",
+      "ADMINISTRATIVO"
+    ],
+    "associado_status": "NAO ASSOCIADO",
+    "user_devices": [],
+    "all_titulos": [],
+    "created_at": {
+      "$date": "2025-10-03T20:24:41.820Z"
+    },
+    "updated_at": {
+      "$date": "2025-11-26T12:00:01.710Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "68e0310a29b3e854212becbf"
+    },
+    "nome": "LAÍS ANTUNES PEREIRA",
+    "cpf_cnpj": "04946346260",
+    "telefones": [
+      "91980959529"
+    ],
+    "criou_senha_acesso": true,
+    "contratos_resort": [],
+    "veiculos": [],
+    "perfil": {
+      "permissoes": []
+    },
+    "perfil_v2": {
+      "_id": "68dfb949bf66e8d3245d4741",
+      "nome": "VENDEDOR",
+      "scopes": [
+        "usuarios.leitura_limitada_vendedor",
+        "usuarios.editar",
+        "vendas.leitura_limitada_vendedor",
+        "titulos.leitura_limitada_vendedor"
+      ]
+    },
+    "crm_levels": [],
+    "senha": "$2b$10$g1Xe0lBKDu04yQezKq46Y.jCUPfSwjUTloXm4FQBdqPfR/B43SwT6",
+    "numero_telefone_acesso": "91980959529",
+    "clube": {
+      "_id": "68d18e77f0d20fe8813947ff",
+      "nome": "VALE DAS MINAS"
+    },
+    "status": "ATIVO",
+    "niveis_acesso": [
+      "VENDEDOR",
+      "CLIENTE",
+      "ADMINISTRATIVO"
+    ],
+    "associado_status": "NAO ASSOCIADO",
+    "user_devices": [],
+    "all_titulos": [],
+    "created_at": {
+      "$date": "2025-10-03T20:24:42.277Z"
+    },
+    "updated_at": {
+      "$date": "2025-11-26T12:00:01.710Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "68e0310a29b3e854212becc2"
+    },
+    "nome": "ALBERTO CARLOS DA SILVA SANTOS",
+    "cpf_cnpj": "04272693182",
+    "telefones": [
+      "91984778201"
+    ],
+    "criou_senha_acesso": true,
+    "contratos_resort": [],
+    "veiculos": [],
+    "perfil": {
+      "permissoes": []
+    },
+    "perfil_v2": {
+      "_id": "68dfb949bf66e8d3245d4741",
+      "nome": "VENDEDOR",
+      "scopes": [
+        "usuarios.leitura_limitada_vendedor",
+        "usuarios.editar",
+        "vendas.leitura_limitada_vendedor",
+        "titulos.leitura_limitada_vendedor"
+      ]
+    },
+    "crm_levels": [],
+    "senha": "$2b$10$af5acviZ4OOJmfMdo1mnTed9TFB8/La/eC9dnnB6ICQkMQwxjQHpu",
+    "numero_telefone_acesso": "91984778201",
+    "clube": {
+      "_id": "68d18e77f0d20fe8813947ff",
+      "nome": "VALE DAS MINAS"
+    },
+    "status": "ATIVO",
+    "niveis_acesso": [
+      "CLIENTE",
+      "VENDEDOR",
+      "ADMINISTRATIVO"
+    ],
+    "associado_status": "NAO ASSOCIADO",
+    "user_devices": [],
+    "all_titulos": [],
+    "created_at": {
+      "$date": "2025-10-03T20:24:42.734Z"
+    },
+    "updated_at": {
+      "$date": "2025-11-26T15:47:30.318Z"
+    },
+    "__v": 0,
+    "atualizado_por": {
+      "_id": "68d195c67a358e1969380882",
+      "cpf_cnpj": "02581748206",
+      "nome": "Leonardo Souza"
+    },
+    "cartao_credito": "",
+    "cheque": "",
+    "data_nascimento": "14/05/1994",
+    "email": "betoficiall@gmail.com",
+    "email_secundario": "betoficiall@gmail.com",
+    "endereco_primario": {
+      "cep": "",
+      "logradouro": "",
+      "numero": "",
+      "complemento": "",
+      "bairro": "",
+      "cidade": "",
+      "estado": ""
+    },
+    "estado_civil": "SOLTEIRO",
+    "filhos": "",
+    "genero": "MASCULINO",
+    "imovel": "",
+    "profissao": "",
+    "renda_familiar": "",
+    "rg": "",
+    "tipo_documento": "cpf",
+    "ultima_alteracao_senha": {
+      "$date": "2025-10-04T14:15:22.376Z"
+    },
+    "data_nascimento_date": {
+      "$date": "1994-05-14T00:00:00.000Z"
+    },
+    "appEngine": {
+      "ip": "2804:214:92e7:5272:f794:bba6:b1c3:991d",
+      "city": "belem",
+      "region": "pa",
+      "user_agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Mobile Safari/537.36",
+      "last_request": {
+        "$date": "2025-11-26T15:47:30.253Z"
+      },
+      "method": "GET",
+      "endpoint": "/v3/admin/usuarios"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68e0310b29b3e854212becc5"
+    },
+    "nome": "ALDEMARA ALVES DA COSTA BATISTA",
+    "cpf_cnpj": "57360073200",
+    "telefones": [
+      "94992411471"
+    ],
+    "criou_senha_acesso": true,
+    "contratos_resort": [],
+    "veiculos": [],
+    "perfil": {
+      "permissoes": []
+    },
+    "perfil_v2": {
+      "_id": "68dfb949bf66e8d3245d4741",
+      "nome": "VENDEDOR",
+      "scopes": [
+        "usuarios.leitura_limitada_vendedor",
+        "usuarios.editar",
+        "vendas.leitura_limitada_vendedor",
+        "titulos.leitura_limitada_vendedor"
+      ]
+    },
+    "crm_levels": [],
+    "senha": "$2b$10$ZuIFUJ2ii1tFzSoXkSozCOA8XreUI/m4ybsJ3gn0GSSu0SONvWdji",
+    "numero_telefone_acesso": "94992411471",
+    "clube": {
+      "_id": "68d18e77f0d20fe8813947ff",
+      "nome": "VALE DAS MINAS"
+    },
+    "status": "ATIVO",
+    "niveis_acesso": [
+      "VENDEDOR",
+      "CLIENTE",
+      "ADMINISTRATIVO"
+    ],
+    "associado_status": "NAO ASSOCIADO",
+    "user_devices": [],
+    "all_titulos": [],
+    "created_at": {
+      "$date": "2025-10-03T20:24:43.204Z"
+    },
+    "updated_at": {
+      "$date": "2025-11-26T12:00:01.710Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "68e0310b29b3e854212becc8"
+    },
+    "nome": "VILSON JOSÉ DA SILVA OLIVEIRA",
+    "cpf_cnpj": "00929838122",
+    "telefones": [
+      "94984073036"
+    ],
+    "criou_senha_acesso": true,
+    "contratos_resort": [],
+    "veiculos": [],
+    "perfil": {
+      "permissoes": []
+    },
+    "perfil_v2": {
+      "_id": "68dfb949bf66e8d3245d4741",
+      "nome": "VENDEDOR",
+      "scopes": [
+        "usuarios.leitura_limitada_vendedor",
+        "usuarios.editar",
+        "vendas.leitura_limitada_vendedor",
+        "titulos.leitura_limitada_vendedor"
+      ]
+    },
+    "crm_levels": [],
+    "senha": "$2b$10$0E/q0EHNxDOSOVy5kis5TOEVkQ/DhsaZa0EuQcXtW9jeGCC0KeUr.",
+    "numero_telefone_acesso": "94984073036",
+    "clube": {
+      "_id": "68d18e77f0d20fe8813947ff",
+      "nome": "VALE DAS MINAS"
+    },
+    "status": "ATIVO",
+    "niveis_acesso": [
+      "VENDEDOR",
+      "CLIENTE",
+      "ADMINISTRATIVO"
+    ],
+    "associado_status": "NAO ASSOCIADO",
+    "user_devices": [],
+    "all_titulos": [],
+    "created_at": {
+      "$date": "2025-10-03T20:24:43.667Z"
+    },
+    "updated_at": {
+      "$date": "2025-11-26T12:00:01.710Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "68e0310c29b3e854212beccb"
+    },
+    "nome": "MARLENE RAMOS CAVALCANTE",
+    "cpf_cnpj": "25903802249",
+    "telefones": [
+      "94984292611"
+    ],
+    "criou_senha_acesso": true,
+    "contratos_resort": [],
+    "veiculos": [],
+    "perfil": {
+      "permissoes": []
+    },
+    "perfil_v2": {
+      "_id": "68dfb949bf66e8d3245d4741",
+      "nome": "VENDEDOR",
+      "scopes": [
+        "usuarios.leitura_limitada_vendedor",
+        "usuarios.editar",
+        "vendas.leitura_limitada_vendedor",
+        "titulos.leitura_limitada_vendedor"
+      ]
+    },
+    "crm_levels": [],
+    "senha": "$2b$10$iX2eLZ/SODNvArZ30KHN3OguA/w4Ca4s59O4yfH1EiQBoSZ7xGpzS",
+    "numero_telefone_acesso": "94984292611",
+    "clube": {
+      "_id": "68d18e77f0d20fe8813947ff",
+      "nome": "VALE DAS MINAS"
+    },
+    "status": "ATIVO",
+    "niveis_acesso": [
+      "VENDEDOR",
+      "CLIENTE",
+      "ADMINISTRATIVO"
+    ],
+    "associado_status": "NAO ASSOCIADO",
+    "user_devices": [],
+    "all_titulos": [],
+    "created_at": {
+      "$date": "2025-10-03T20:24:44.129Z"
+    },
+    "updated_at": {
+      "$date": "2025-11-26T12:00:01.710Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "68e0310c29b3e854212becce"
+    },
+    "nome": "SAMUEL ALVES DE OLIVEIRA",
+    "cpf_cnpj": "62030515272",
+    "telefones": [
+      "94991871885"
+    ],
+    "criou_senha_acesso": true,
+    "contratos_resort": [],
+    "veiculos": [],
+    "perfil": {
+      "permissoes": []
+    },
+    "perfil_v2": {
+      "_id": "68dfb949bf66e8d3245d4741",
+      "nome": "VENDEDOR",
+      "scopes": [
+        "usuarios.leitura_limitada_vendedor",
+        "usuarios.editar",
+        "vendas.leitura_limitada_vendedor",
+        "titulos.leitura_limitada_vendedor"
+      ]
+    },
+    "crm_levels": [],
+    "senha": "$2b$10$ShKEqlNm/9ZnjRd.SipBwuQfQ6R5nZpqm8Z83VQHr/YuN.eH0x6xG",
+    "numero_telefone_acesso": "94991871885",
+    "clube": {
+      "_id": "68d18e77f0d20fe8813947ff",
+      "nome": "VALE DAS MINAS"
+    },
+    "status": "ATIVO",
+    "niveis_acesso": [
+      "VENDEDOR",
+      "CLIENTE",
+      "ADMINISTRATIVO"
+    ],
+    "associado_status": "ASSOCIADO PENDENTE",
+    "user_devices": [],
+    "all_titulos": [
+      {
+        "_id": "68f645e46877d7957f1b4664",
+        "titulo_serie_hash": "000101/000001",
+        "nome_serie": "REMIDO ESMERALDA",
+        "situacao": "Pendente",
+        "assinatura": {
+          "$date": "2025-10-18T00:00:00.000Z"
+        },
+        "vencimento": {
+          "$date": "2035-10-18T00:00:00.000Z"
+        },
+        "bloqueado": true
+      }
+    ],
+    "created_at": {
+      "$date": "2025-10-03T20:24:44.584Z"
+    },
+    "updated_at": {
+      "$date": "2025-11-26T12:00:00.582Z"
+    },
+    "__v": 0,
+    "qcscore_conceito": "A",
+    "qcscore_data_consulta": {
+      "$date": "2025-10-18T15:08:39.868Z"
+    },
+    "qcscore_legenda": "Excelente perfil cadastral. Recomenda-se apostar no cliente",
+    "atualizado_por": {
+      "_id": "68dfcf99bf66e8d3245d53cb",
+      "nome": "Clistefanni Macedo Candido",
+      "cpf_cnpj": "05535219185"
+    },
+    "data_nascimento": "1979-04-27",
+    "data_nascimento_date": {
+      "$date": "1979-04-27T00:00:00.000Z"
+    },
+    "email": "samuel-03@bol.com.br",
+    "endereco_primario": {
+      "cep": "68515000",
+      "logradouro": "AV ANA KARINA ",
+      "numero": "121",
+      "complemento": "",
+      "bairro": "APOENA",
+      "cidade": "PARAUAPEBAS",
+      "estado": "PA"
+    },
+    "estado_civil": "CASADO",
+    "genero": "MASCULINO",
+    "rg": "355620",
+    "tipo_documento": "cpf",
+    "codigo_acesso_fonte": "Telefone_94991871885",
+    "codigo_acesso_gerado": "6412",
+    "codigo_acesso_solicitado": {
+      "$date": "2025-11-13T23:08:14.330Z"
+    },
+    "notificacao_cobranca_data": {
+      "$date": "2025-11-25T13:00:21.935Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68e0310d29b3e854212becd1"
+    },
+    "nome": "CINTHIA VIEIRA",
+    "cpf_cnpj": "03233363451",
+    "telefones": [
+      "94992020888"
+    ],
+    "criou_senha_acesso": true,
+    "contratos_resort": [],
+    "veiculos": [],
+    "perfil": {
+      "permissoes": []
+    },
+    "perfil_v2": {
+      "_id": "68dfb949bf66e8d3245d4741",
+      "nome": "VENDEDOR",
+      "scopes": [
+        "usuarios.leitura_limitada_vendedor",
+        "usuarios.editar",
+        "vendas.leitura_limitada_vendedor",
+        "titulos.leitura_limitada_vendedor"
+      ]
+    },
+    "crm_levels": [],
+    "senha": "$2b$10$F0MAZwhVPR9GgCca3BIb8usRo4vpLo/ZSZbUXvhquuBGAwSomhHfe",
+    "numero_telefone_acesso": "94992020888",
+    "clube": {
+      "_id": "68d18e77f0d20fe8813947ff",
+      "nome": "VALE DAS MINAS"
+    },
+    "status": "ATIVO",
+    "niveis_acesso": [
+      "VENDEDOR",
+      "CLIENTE",
+      "ADMINISTRATIVO"
+    ],
+    "associado_status": "NAO ASSOCIADO",
+    "user_devices": [],
+    "all_titulos": [],
+    "created_at": {
+      "$date": "2025-10-03T20:24:45.051Z"
+    },
+    "updated_at": {
+      "$date": "2025-11-26T12:00:01.710Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "68e0310d29b3e854212becd4"
+    },
+    "nome": "RUITER MARCIO ROCHA DE OLIVEIRA",
+    "cpf_cnpj": "40458105287",
+    "telefones": [
+      "94991208979"
+    ],
+    "criou_senha_acesso": true,
+    "contratos_resort": [],
+    "veiculos": [],
+    "perfil": {
+      "permissoes": []
+    },
+    "perfil_v2": {
+      "_id": "68dfb949bf66e8d3245d4741",
+      "nome": "VENDEDOR",
+      "scopes": [
+        "usuarios.leitura_limitada_vendedor",
+        "usuarios.editar",
+        "vendas.leitura_limitada_vendedor",
+        "titulos.leitura_limitada_vendedor"
+      ]
+    },
+    "crm_levels": [],
+    "senha": "$2b$10$/K5ASsHF/wh6Z6B4bW.q1O6BgpQ9GzYRmZFFwqms/k2mKXWoWHmR2",
+    "numero_telefone_acesso": "94991208979",
+    "clube": {
+      "_id": "68d18e77f0d20fe8813947ff",
+      "nome": "VALE DAS MINAS"
+    },
+    "status": "ATIVO",
+    "niveis_acesso": [
+      "VENDEDOR",
+      "CLIENTE",
+      "ADMINISTRATIVO"
+    ],
+    "associado_status": "NAO ASSOCIADO",
+    "user_devices": [],
+    "all_titulos": [],
+    "created_at": {
+      "$date": "2025-10-03T20:24:45.509Z"
+    },
+    "updated_at": {
+      "$date": "2025-11-26T12:00:01.710Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "68e0310d29b3e854212becd7"
+    },
+    "nome": "KARISAN LUCAS OLIVEIRA ANDRADE",
+    "cpf_cnpj": "72969830272",
+    "telefones": [
+      "94999556937"
+    ],
+    "criou_senha_acesso": true,
+    "contratos_resort": [],
+    "veiculos": [],
+    "perfil": {
+      "permissoes": []
+    },
+    "perfil_v2": {
+      "_id": "68dfb949bf66e8d3245d4741",
+      "nome": "VENDEDOR",
+      "scopes": [
+        "usuarios.leitura_limitada_vendedor",
+        "usuarios.editar",
+        "vendas.leitura_limitada_vendedor",
+        "titulos.leitura_limitada_vendedor"
+      ]
+    },
+    "crm_levels": [],
+    "senha": "$2b$10$uL486rqdLHX0RNgLfqByvu966hByxGfM3bCruwllJA6252xd5QaNa",
+    "numero_telefone_acesso": "94999556937",
+    "clube": {
+      "_id": "68d18e77f0d20fe8813947ff",
+      "nome": "VALE DAS MINAS"
+    },
+    "status": "ATIVO",
+    "niveis_acesso": [
+      "VENDEDOR",
+      "CLIENTE",
+      "ADMINISTRATIVO"
+    ],
+    "associado_status": "NAO ASSOCIADO",
+    "user_devices": [],
+    "all_titulos": [],
+    "created_at": {
+      "$date": "2025-10-03T20:24:45.992Z"
+    },
+    "updated_at": {
+      "$date": "2025-11-26T12:00:01.710Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "68e0310e29b3e854212becda"
+    },
+    "nome": "MARIA CLEIDE LIMA DA SILVA",
+    "cpf_cnpj": "51804140244",
+    "telefones": [
+      "91987644983"
+    ],
+    "criou_senha_acesso": true,
+    "contratos_resort": [],
+    "veiculos": [],
+    "perfil": {
+      "permissoes": []
+    },
+    "perfil_v2": {
+      "_id": "68dfb949bf66e8d3245d4741",
+      "nome": "VENDEDOR",
+      "scopes": [
+        "usuarios.leitura_limitada_vendedor",
+        "usuarios.editar",
+        "vendas.leitura_limitada_vendedor",
+        "titulos.leitura_limitada_vendedor"
+      ]
+    },
+    "crm_levels": [],
+    "senha": "$2b$10$CgJIS9NtjJg8CX9U47wFD.cFy3Br/chCMD.F676wA1NyP9l3BxM2O",
+    "numero_telefone_acesso": "91987644983",
+    "clube": {
+      "_id": "68d18e77f0d20fe8813947ff",
+      "nome": "VALE DAS MINAS"
+    },
+    "status": "ATIVO",
+    "niveis_acesso": [
+      "VENDEDOR",
+      "CLIENTE",
+      "ADMINISTRATIVO"
+    ],
+    "associado_status": "NAO ASSOCIADO",
+    "user_devices": [],
+    "all_titulos": [],
+    "created_at": {
+      "$date": "2025-10-03T20:24:46.474Z"
+    },
+    "updated_at": {
+      "$date": "2025-11-26T12:00:01.710Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "68e0310e29b3e854212becdd"
+    },
+    "nome": "ROSALVA DOS SANTOS ROSA",
+    "cpf_cnpj": "42871590125",
+    "telefones": [
+      "94991975331"
+    ],
+    "criou_senha_acesso": true,
+    "contratos_resort": [],
+    "veiculos": [],
+    "perfil": {
+      "permissoes": []
+    },
+    "perfil_v2": {
+      "_id": "68dfb949bf66e8d3245d4741",
+      "nome": "VENDEDOR",
+      "scopes": [
+        "usuarios.leitura_limitada_vendedor",
+        "usuarios.editar",
+        "vendas.leitura_limitada_vendedor",
+        "titulos.leitura_limitada_vendedor"
+      ]
+    },
+    "crm_levels": [],
+    "senha": "$2b$10$XVgpUVnd.TEIVQZsEErtLOgtSHRtvJIjAkptSBKtoPmcZMDa/f2bi",
+    "numero_telefone_acesso": "94991975331",
+    "clube": {
+      "_id": "68d18e77f0d20fe8813947ff",
+      "nome": "VALE DAS MINAS"
+    },
+    "status": "ATIVO",
+    "niveis_acesso": [
+      "VENDEDOR",
+      "CLIENTE",
+      "ADMINISTRATIVO"
+    ],
+    "associado_status": "NAO ASSOCIADO",
+    "user_devices": [],
+    "all_titulos": [],
+    "created_at": {
+      "$date": "2025-10-03T20:24:46.909Z"
+    },
+    "updated_at": {
+      "$date": "2025-11-26T12:00:01.710Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "68e0310f29b3e854212bece0"
+    },
+    "nome": "EDELMA GEORGINA FELIZARDO",
+    "cpf_cnpj": "59486112215",
+    "telefones": [
+      "94981147232"
+    ],
+    "criou_senha_acesso": true,
+    "contratos_resort": [],
+    "veiculos": [],
+    "perfil": {
+      "permissoes": []
+    },
+    "perfil_v2": {
+      "_id": "68dfb949bf66e8d3245d4741",
+      "nome": "VENDEDOR",
+      "scopes": [
+        "usuarios.leitura_limitada_vendedor",
+        "usuarios.editar",
+        "vendas.leitura_limitada_vendedor",
+        "titulos.leitura_limitada_vendedor"
+      ]
+    },
+    "crm_levels": [],
+    "senha": "$2b$10$ZloAjL1PrLr8R3JG5dFK9udl2U55QLnQYozJputFB5BtoSblbp1WC",
+    "numero_telefone_acesso": "94981147232",
+    "clube": {
+      "_id": "68d18e77f0d20fe8813947ff",
+      "nome": "VALE DAS MINAS"
+    },
+    "status": "ATIVO",
+    "niveis_acesso": [
+      "VENDEDOR",
+      "CLIENTE",
+      "ADMINISTRATIVO"
+    ],
+    "associado_status": "NAO ASSOCIADO",
+    "user_devices": [],
+    "all_titulos": [],
+    "created_at": {
+      "$date": "2025-10-03T20:24:47.365Z"
+    },
+    "updated_at": {
+      "$date": "2025-11-26T12:00:01.710Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "68e0310f29b3e854212bece3"
+    },
+    "nome": "FABRICIO JORGE DA SILVA BARROS",
+    "cpf_cnpj": "65789083234",
+    "telefones": [
+      "91981275942"
+    ],
+    "criou_senha_acesso": true,
+    "contratos_resort": [],
+    "veiculos": [],
+    "perfil": {
+      "permissoes": []
+    },
+    "perfil_v2": {
+      "_id": "68dfb949bf66e8d3245d4741",
+      "nome": "VENDEDOR",
+      "scopes": [
+        "usuarios.leitura_limitada_vendedor",
+        "usuarios.editar",
+        "vendas.leitura_limitada_vendedor",
+        "titulos.leitura_limitada_vendedor"
+      ]
+    },
+    "crm_levels": [],
+    "senha": "$2b$10$yCHHTUsOqXsI19zpVvtdgOlynI7OezGKWd3w3w37tnqaHE7f5EZJC",
+    "numero_telefone_acesso": "91981275942",
+    "clube": {
+      "_id": "68d18e77f0d20fe8813947ff",
+      "nome": "VALE DAS MINAS"
+    },
+    "status": "ATIVO",
+    "niveis_acesso": [
+      "VENDEDOR",
+      "CLIENTE",
+      "ADMINISTRATIVO"
+    ],
+    "associado_status": "NAO ASSOCIADO",
+    "user_devices": [],
+    "all_titulos": [],
+    "created_at": {
+      "$date": "2025-10-03T20:24:47.837Z"
+    },
+    "updated_at": {
+      "$date": "2025-11-26T12:00:01.710Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "68e0311029b3e854212bece6"
+    },
+    "nome": "ÉRICO MATEUS DE SENA SILVA",
+    "cpf_cnpj": "04204321240",
+    "telefones": [
+      "91982603959"
+    ],
+    "criou_senha_acesso": true,
+    "contratos_resort": [],
+    "veiculos": [],
+    "perfil": {
+      "permissoes": []
+    },
+    "perfil_v2": {
+      "_id": "68dfb949bf66e8d3245d4741",
+      "nome": "VENDEDOR",
+      "scopes": [
+        "usuarios.leitura_limitada_vendedor",
+        "usuarios.editar",
+        "vendas.leitura_limitada_vendedor",
+        "titulos.leitura_limitada_vendedor"
+      ]
+    },
+    "crm_levels": [],
+    "senha": "$2b$10$dCB9p1wAlx4AFnIqD7GckePQH1WPJ7HDtorDHy5VydMoGqJrA3eMu",
+    "numero_telefone_acesso": "91982603959",
+    "clube": {
+      "_id": "68d18e77f0d20fe8813947ff",
+      "nome": "VALE DAS MINAS"
+    },
+    "status": "ATIVO",
+    "niveis_acesso": [
+      "VENDEDOR",
+      "CLIENTE",
+      "ADMINISTRATIVO"
+    ],
+    "associado_status": "NAO ASSOCIADO",
+    "user_devices": [],
+    "all_titulos": [],
+    "created_at": {
+      "$date": "2025-10-03T20:24:48.284Z"
+    },
+    "updated_at": {
+      "$date": "2025-11-26T12:00:01.710Z"
+    },
+    "__v": 0,
+    "appEngine": {
+      "ip": "2804:214:92e0:945:1879:8734:a316:8d70",
+      "city": "belem",
+      "region": "pa",
+      "user_agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Mobile Safari/537.36",
+      "last_request": {
+        "$date": "2025-11-20T13:07:33.022Z"
+      },
+      "method": "GET",
+      "endpoint": "/v3/admin/usuarios"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68e0311029b3e854212bece9"
+    },
+    "nome": "MARGARETH JORDY",
+    "cpf_cnpj": "99340216768",
+    "telefones": [
+      "94984383714"
+    ],
+    "criou_senha_acesso": true,
+    "contratos_resort": [],
+    "veiculos": [],
+    "perfil": {
+      "permissoes": []
+    },
+    "perfil_v2": {
+      "_id": "68dfb949bf66e8d3245d4741",
+      "nome": "VENDEDOR",
+      "scopes": [
+        "usuarios.leitura_limitada_vendedor",
+        "usuarios.editar",
+        "vendas.leitura_limitada_vendedor",
+        "titulos.leitura_limitada_vendedor"
+      ]
+    },
+    "crm_levels": [],
+    "senha": "$2b$10$UqhRNtWd7gBk8hb5gJJy1u24pHIOJt0dPrCvLbdBGhF1GmrAf5mca",
+    "numero_telefone_acesso": "94984383714",
+    "clube": {
+      "_id": "68d18e77f0d20fe8813947ff",
+      "nome": "VALE DAS MINAS"
+    },
+    "status": "ATIVO",
+    "niveis_acesso": [
+      "VENDEDOR",
+      "CLIENTE",
+      "ADMINISTRATIVO"
+    ],
+    "associado_status": "NAO ASSOCIADO",
+    "user_devices": [],
+    "all_titulos": [],
+    "created_at": {
+      "$date": "2025-10-03T20:24:48.739Z"
+    },
+    "updated_at": {
+      "$date": "2025-11-26T12:00:01.710Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "68e0311129b3e854212becee"
+    },
+    "nome": "SUTERIO ANDRADE LIMA",
+    "cpf_cnpj": "01516748255",
+    "telefones": [
+      "94984335245"
+    ],
+    "criou_senha_acesso": true,
+    "contratos_resort": [],
+    "veiculos": [],
+    "perfil": {
+      "permissoes": []
+    },
+    "perfil_v2": {
+      "_id": "68dfb949bf66e8d3245d4741",
+      "nome": "VENDEDOR",
+      "scopes": [
+        "usuarios.leitura_limitada_vendedor",
+        "usuarios.editar",
+        "vendas.leitura_limitada_vendedor",
+        "titulos.leitura_limitada_vendedor"
+      ]
+    },
+    "crm_levels": [],
+    "senha": "$2b$10$zQMXDpQWgzgfUqJZwk9FQurg67Ucz3UYudPgAgeje0o6C8ztWk2me",
+    "numero_telefone_acesso": "94984335245",
+    "clube": {
+      "_id": "68d18e77f0d20fe8813947ff",
+      "nome": "VALE DAS MINAS"
+    },
+    "status": "ATIVO",
+    "niveis_acesso": [
+      "VENDEDOR",
+      "CLIENTE",
+      "ADMINISTRATIVO"
+    ],
+    "associado_status": "NAO ASSOCIADO",
+    "user_devices": [],
+    "all_titulos": [],
+    "created_at": {
+      "$date": "2025-10-03T20:24:49.727Z"
+    },
+    "updated_at": {
+      "$date": "2025-11-26T12:00:01.710Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "68e0311229b3e854212becf1"
+    },
+    "nome": "ELIZEU TEIXEIRA DE SOUZA FILHO",
+    "cpf_cnpj": "31997910268",
+    "telefones": [
+      "94992305706"
+    ],
+    "criou_senha_acesso": true,
+    "contratos_resort": [],
+    "veiculos": [],
+    "perfil": {
+      "permissoes": []
+    },
+    "perfil_v2": {
+      "_id": "68dfb949bf66e8d3245d4741",
+      "nome": "VENDEDOR",
+      "scopes": [
+        "usuarios.leitura_limitada_vendedor",
+        "usuarios.editar",
+        "vendas.leitura_limitada_vendedor",
+        "titulos.leitura_limitada_vendedor"
+      ]
+    },
+    "crm_levels": [],
+    "senha": "$2b$10$MKrzz0UsbmebzRZVxGqeRuhnVyHKx3NpiarRXwLx/4L5KtW6KW7Za",
+    "numero_telefone_acesso": "94992305706",
+    "clube": {
+      "_id": "68d18e77f0d20fe8813947ff",
+      "nome": "VALE DAS MINAS"
+    },
+    "status": "ATIVO",
+    "niveis_acesso": [
+      "VENDEDOR",
+      "CLIENTE",
+      "ADMINISTRATIVO"
+    ],
+    "associado_status": "NAO ASSOCIADO",
+    "user_devices": [],
+    "all_titulos": [],
+    "created_at": {
+      "$date": "2025-10-03T20:24:50.191Z"
+    },
+    "updated_at": {
+      "$date": "2025-11-26T12:00:01.710Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "68e0311229b3e854212becf4"
+    },
+    "nome": "EVA TRAJANO DE BRITO",
+    "cpf_cnpj": "24919055234",
+    "telefones": [
+      "94981158104"
+    ],
+    "criou_senha_acesso": true,
+    "contratos_resort": [],
+    "veiculos": [],
+    "perfil": {
+      "permissoes": []
+    },
+    "perfil_v2": {
+      "_id": "68dfb949bf66e8d3245d4741",
+      "nome": "VENDEDOR",
+      "scopes": [
+        "usuarios.leitura_limitada_vendedor",
+        "usuarios.editar",
+        "vendas.leitura_limitada_vendedor",
+        "titulos.leitura_limitada_vendedor"
+      ]
+    },
+    "crm_levels": [],
+    "senha": "$2b$10$KVK4jbP42fnwtQIWiSemruNSSGvPQyPXq25235/SGBF4YiSEmbvMG",
+    "numero_telefone_acesso": "94981158104",
+    "clube": {
+      "_id": "68d18e77f0d20fe8813947ff",
+      "nome": "VALE DAS MINAS"
+    },
+    "status": "ATIVO",
+    "niveis_acesso": [
+      "CLIENTE",
+      "VENDEDOR",
+      "ADMINISTRATIVO"
+    ],
+    "associado_status": "NAO ASSOCIADO",
+    "user_devices": [],
+    "all_titulos": [],
+    "created_at": {
+      "$date": "2025-10-03T20:24:50.653Z"
+    },
+    "updated_at": {
+      "$date": "2025-11-26T12:00:01.710Z"
+    },
+    "__v": 0,
+    "atualizado_por": {
+      "_id": "68d195c67a358e1969380882",
+      "cpf_cnpj": "02581748206",
+      "nome": "Leonardo Souza"
+    },
+    "cartao_credito": "",
+    "cheque": "",
+    "data_nascimento": "",
+    "email": "",
+    "email_secundario": "",
+    "endereco_primario": {
+      "cep": "",
+      "logradouro": "",
+      "numero": "",
+      "complemento": "",
+      "bairro": "",
+      "cidade": "",
+      "estado": ""
+    },
+    "estado_civil": "",
+    "filhos": "",
+    "genero": "",
+    "imovel": "",
+    "profissao": "",
+    "renda_familiar": "",
+    "rg": "",
+    "tipo_documento": "cpf",
+    "ultima_alteracao_senha": {
+      "$date": "2025-10-03T22:11:24.782Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68e0311329b3e854212becf8"
+    },
+    "nome": "JOÃO VICTOR DA SILVA ALVES",
+    "cpf_cnpj": "03657324275",
+    "telefones": [
+      "91980171496"
+    ],
+    "criou_senha_acesso": true,
+    "contratos_resort": [],
+    "veiculos": [],
+    "perfil": {
+      "permissoes": []
+    },
+    "perfil_v2": {
+      "_id": "68dfb949bf66e8d3245d4741",
+      "nome": "VENDEDOR",
+      "scopes": [
+        "usuarios.leitura_limitada_vendedor",
+        "usuarios.editar",
+        "vendas.leitura_limitada_vendedor",
+        "titulos.leitura_limitada_vendedor"
+      ]
+    },
+    "crm_levels": [],
+    "senha": "$2b$10$NbxNQsbMVspiXtBOsQq3se/.uupwgu5g9R8ecWpmHQOR4MdFRxcT2",
+    "numero_telefone_acesso": "91980171496",
+    "clube": {
+      "_id": "68d18e77f0d20fe8813947ff",
+      "nome": "VALE DAS MINAS"
+    },
+    "status": "ATIVO",
+    "niveis_acesso": [
+      "VENDEDOR",
+      "CLIENTE",
+      "ADMINISTRATIVO"
+    ],
+    "associado_status": "NAO ASSOCIADO",
+    "user_devices": [],
+    "all_titulos": [],
+    "created_at": {
+      "$date": "2025-10-03T20:24:51.382Z"
+    },
+    "updated_at": {
+      "$date": "2025-11-26T12:00:01.710Z"
+    },
+    "__v": 0,
+    "appEngine": {
+      "ip": "170.239.202.244",
+      "city": "parauapebas",
+      "region": "pa",
+      "user_agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_6_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.6 Mobile/15E148 Safari/604.1",
+      "last_request": {
+        "$date": "2025-11-20T22:51:22.165Z"
+      },
+      "method": "GET",
+      "endpoint": "/v3/admin/vendas"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68e0311329b3e854212becfb"
+    },
+    "nome": "TEREZINHA MACHADO PORTELA",
+    "cpf_cnpj": "45237395104",
+    "telefones": [],
+    "criou_senha_acesso": true,
+    "contratos_resort": [],
+    "veiculos": [],
+    "perfil": {
+      "permissoes": []
+    },
+    "perfil_v2": {
+      "_id": "68dfb949bf66e8d3245d4741",
+      "nome": "VENDEDOR",
+      "scopes": [
+        "usuarios.leitura_limitada_vendedor",
+        "usuarios.editar",
+        "vendas.leitura_limitada_vendedor",
+        "titulos.leitura_limitada_vendedor"
+      ]
+    },
+    "crm_levels": [],
+    "senha": "$2b$10$vngfUXcXh4dF.cTYvnv7SeOZMf24AdG7R3YIK07Y8rqU5sIquH3YO",
+    "clube": {
+      "_id": "68d18e77f0d20fe8813947ff",
+      "nome": "VALE DAS MINAS"
+    },
+    "status": "ATIVO",
+    "niveis_acesso": [
+      "VENDEDOR",
+      "CLIENTE",
+      "ADMINISTRATIVO"
+    ],
+    "associado_status": "NAO ASSOCIADO",
+    "user_devices": [],
+    "all_titulos": [],
+    "created_at": {
+      "$date": "2025-10-03T20:24:51.840Z"
+    },
+    "updated_at": {
+      "$date": "2025-11-26T12:00:01.710Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "68e0311429b3e854212becfe"
+    },
+    "nome": "MARCOS DANILLO SIQUEIRA BRAGA",
+    "cpf_cnpj": "00004185102",
+    "telefones": [],
+    "criou_senha_acesso": true,
+    "contratos_resort": [],
+    "veiculos": [],
+    "perfil": {
+      "permissoes": []
+    },
+    "perfil_v2": {
+      "_id": "68dfb949bf66e8d3245d4741",
+      "nome": "VENDEDOR",
+      "scopes": [
+        "usuarios.leitura_limitada_vendedor",
+        "usuarios.editar",
+        "vendas.leitura_limitada_vendedor",
+        "titulos.leitura_limitada_vendedor"
+      ]
+    },
+    "crm_levels": [],
+    "senha": "$2b$10$BN8mpcv3BIgxH9c7IHI2H.XbmORlK8Sd8RxTasDgSbpn.YktNvxq2",
+    "clube": {
+      "_id": "68d18e77f0d20fe8813947ff",
+      "nome": "VALE DAS MINAS"
+    },
+    "status": "ATIVO",
+    "niveis_acesso": [
+      "VENDEDOR",
+      "CLIENTE",
+      "ADMINISTRATIVO"
+    ],
+    "associado_status": "NAO ASSOCIADO",
+    "user_devices": [],
+    "all_titulos": [],
+    "created_at": {
+      "$date": "2025-10-03T20:24:52.294Z"
+    },
+    "updated_at": {
+      "$date": "2025-11-26T12:00:01.710Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "68e0311429b3e854212bed01"
+    },
+    "nome": "DANIEL RENNER MOURA MORAES",
+    "cpf_cnpj": "00297161288",
+    "telefones": [
+      "94991822648"
+    ],
+    "criou_senha_acesso": true,
+    "contratos_resort": [],
+    "veiculos": [],
+    "perfil": {
+      "permissoes": []
+    },
+    "perfil_v2": {
+      "_id": "68dfb949bf66e8d3245d4741",
+      "nome": "VENDEDOR",
+      "scopes": [
+        "usuarios.leitura_limitada_vendedor",
+        "usuarios.editar",
+        "vendas.leitura_limitada_vendedor",
+        "titulos.leitura_limitada_vendedor"
+      ]
+    },
+    "crm_levels": [],
+    "senha": "$2b$10$lP1.A9b3YVzcqBRx3MOOz.PVr.hpSdhoM./H6UURAG3RHqaijXIlW",
+    "clube": {
+      "_id": "68d18e77f0d20fe8813947ff",
+      "nome": "VALE DAS MINAS"
+    },
+    "status": "ATIVO",
+    "niveis_acesso": [
+      "VENDEDOR",
+      "CLIENTE",
+      "ADMINISTRATIVO"
+    ],
+    "associado_status": "ASSOCIADO PENDENTE",
+    "user_devices": [],
+    "all_titulos": [
+      {
+        "_id": "6903b65236dcd40b7d236f07",
+        "titulo_serie_hash": "000159/000001",
+        "nome_serie": "REMIDO ESMERALDA",
+        "situacao": "Pendente",
+        "assinatura": {
+          "$date": "2025-10-29T00:00:00.000Z"
+        },
+        "vencimento": {
+          "$date": "2035-10-29T00:00:00.000Z"
+        },
+        "bloqueado": true
+      }
+    ],
+    "created_at": {
+      "$date": "2025-10-03T20:24:52.758Z"
+    },
+    "updated_at": {
+      "$date": "2025-11-26T12:00:00.585Z"
+    },
+    "__v": 0,
+    "qcscore_conceito": "E",
+    "qcscore_data_consulta": {
+      "$date": "2025-10-29T15:42:05.598Z"
+    },
+    "qcscore_legenda": "Costuma apresentar inadimplência elevada",
+    "atualizado_por": {
+      "_id": "68dfcf99bf66e8d3245d53cb",
+      "nome": "Clistefanni Macedo Candido",
+      "cpf_cnpj": "05535219185"
+    },
+    "data_nascimento": "1998-01-15",
+    "data_nascimento_date": {
+      "$date": "1998-01-15T00:00:00.000Z"
+    },
+    "email": "daniel.renner16@gmail.com",
+    "endereco_primario": {
+      "cep": "68515000",
+      "logradouro": "RUA A15 Q45 L15",
+      "numero": "45",
+      "complemento": "",
+      "bairro": "AMAZONIA",
+      "cidade": "PARAUAPEBAS",
+      "estado": "PA"
+    },
+    "estado_civil": "SOLTEIRO",
+    "genero": "MASCULINO",
+    "numero_telefone_acesso": "94991822648",
+    "rg": "8679110",
+    "tipo_documento": "cpf"
+  },
+  {
+    "_id": {
+      "$oid": "68e0311529b3e854212bed04"
+    },
+    "nome": "CAMILA MOURA BARBOSA",
+    "cpf_cnpj": "06714026684",
+    "telefones": [
+      "94984007101"
+    ],
+    "criou_senha_acesso": true,
+    "contratos_resort": [],
+    "veiculos": [],
+    "perfil": {
+      "permissoes": []
+    },
+    "perfil_v2": {
+      "_id": "68dfb949bf66e8d3245d4741",
+      "nome": "VENDEDOR",
+      "scopes": [
+        "usuarios.leitura_limitada_vendedor",
+        "usuarios.editar",
+        "vendas.leitura_limitada_vendedor",
+        "titulos.leitura_limitada_vendedor"
+      ]
+    },
+    "crm_levels": [],
+    "senha": "$2b$10$13ojyC7nTJyurk4q6qcrne.3ULIsSGxv0OShC8crRpp3rc9lQjjxu",
+    "numero_telefone_acesso": "94984007101",
+    "clube": {
+      "_id": "68d18e77f0d20fe8813947ff",
+      "nome": "VALE DAS MINAS"
+    },
+    "status": "ATIVO",
+    "niveis_acesso": [
+      "CLIENTE",
+      "VENDEDOR",
+      "ADMINISTRATIVO"
+    ],
+    "associado_status": "ASSOCIADO",
+    "user_devices": [],
+    "all_titulos": [
+      {
+        "_id": "68e44b836136329c58f16764",
+        "titulo_serie_hash": "000027/000001",
+        "nome_serie": "REMIDO ESMERALDA",
+        "situacao": "Ativo",
+        "assinatura": {
+          "$date": "2025-10-05T00:00:00.000Z"
+        },
+        "vencimento": {
+          "$date": "2035-10-05T00:00:00.000Z"
+        },
+        "bloqueado": false
+      }
+    ],
+    "created_at": {
+      "$date": "2025-10-03T20:24:53.244Z"
+    },
+    "updated_at": {
+      "$date": "2025-11-26T12:00:00.580Z"
+    },
+    "__v": 0,
+    "qcscore_conceito": "A",
+    "qcscore_data_consulta": {
+      "$date": "2025-10-04T20:07:34.306Z"
+    },
+    "qcscore_legenda": "Excelente perfil cadastral. Recomenda-se apostar no cliente",
+    "atualizado_por": {
+      "_id": "68dea9abda9325a10d7ec15d",
+      "nome": "Vinicius Correa Brasil",
+      "cpf_cnpj": "04354465256"
+    },
+    "cartao_credito": "",
+    "cheque": "",
+    "data_nascimento": "1984-06-19",
+    "email": "mouracamis1@gmail.com",
+    "email_secundario": "",
+    "endereco_primario": {
+      "cep": "68515000",
+      "logradouro": "Rua Iaunde QD77 LT25",
+      "numero": "25",
+      "complemento": "",
+      "bairro": "Vila Rica",
+      "cidade": "PARAUAPEBAS",
+      "estado": "PA"
+    },
+    "estado_civil": "SOLTEIRO",
+    "filhos": "",
+    "genero": "FEMININO",
+    "imovel": "",
+    "profissao": "",
+    "renda_familiar": "",
+    "rg": "12601188",
+    "tipo_documento": "cpf",
+    "ultima_alteracao_senha": {
+      "$date": "2025-10-05T20:02:47.064Z"
+    },
+    "data_nascimento_date": {
+      "$date": "1984-06-19T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68e0311529b3e854212bed07"
+    },
+    "nome": "IRENICE RODRIGUES DOS SANTOS",
+    "cpf_cnpj": "36567647272",
+    "telefones": [
+      "94991289300"
+    ],
+    "criou_senha_acesso": true,
+    "contratos_resort": [],
+    "veiculos": [],
+    "perfil": {
+      "permissoes": []
+    },
+    "perfil_v2": {
+      "_id": "68dfb949bf66e8d3245d4741",
+      "nome": "VENDEDOR",
+      "scopes": [
+        "usuarios.leitura_limitada_vendedor",
+        "usuarios.editar",
+        "vendas.leitura_limitada_vendedor",
+        "titulos.leitura_limitada_vendedor"
+      ]
+    },
+    "crm_levels": [],
+    "senha": "$2b$10$UxFqGamPrfxAqcEwh/G6XO02CgqvuLOdCYpB8NNyPbKEM0Vws.CSS",
+    "numero_telefone_acesso": "94991289300",
+    "clube": {
+      "_id": "68d18e77f0d20fe8813947ff",
+      "nome": "VALE DAS MINAS"
+    },
+    "status": "ATIVO",
+    "niveis_acesso": [
+      "VENDEDOR",
+      "CLIENTE",
+      "ADMINISTRATIVO"
+    ],
+    "associado_status": "NAO ASSOCIADO",
+    "user_devices": [],
+    "all_titulos": [],
+    "created_at": {
+      "$date": "2025-10-03T20:24:53.711Z"
+    },
+    "updated_at": {
+      "$date": "2025-11-26T12:00:01.710Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "68e0311629b3e854212bed0a"
+    },
+    "nome": "JOSÉ ALFREU PEREIRA ROSA",
+    "cpf_cnpj": "18809057287",
+    "telefones": [
+      "94992947998"
+    ],
+    "criou_senha_acesso": true,
+    "contratos_resort": [],
+    "veiculos": [],
+    "perfil": {
+      "permissoes": []
+    },
+    "perfil_v2": {
+      "_id": "68dfb949bf66e8d3245d4741",
+      "nome": "VENDEDOR",
+      "scopes": [
+        "usuarios.leitura_limitada_vendedor",
+        "usuarios.editar",
+        "vendas.leitura_limitada_vendedor",
+        "titulos.leitura_limitada_vendedor"
+      ]
+    },
+    "crm_levels": [],
+    "senha": "$2b$10$jA0S51nAeropo9WMYHFsXuSn8/BC6UzXJAj4wwuMSFPf0Q0Vod3Ui",
+    "numero_telefone_acesso": "94992947998",
+    "clube": {
+      "_id": "68d18e77f0d20fe8813947ff",
+      "nome": "VALE DAS MINAS"
+    },
+    "status": "ATIVO",
+    "niveis_acesso": [
+      "VENDEDOR",
+      "CLIENTE",
+      "ADMINISTRATIVO"
+    ],
+    "associado_status": "NAO ASSOCIADO",
+    "user_devices": [],
+    "all_titulos": [],
+    "created_at": {
+      "$date": "2025-10-03T20:24:54.170Z"
+    },
+    "updated_at": {
+      "$date": "2025-11-26T12:00:01.710Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "68e0311629b3e854212bed0d"
+    },
+    "nome": "RAQUEL ANDRADE ALVES DO VALE",
+    "cpf_cnpj": "06866241650",
+    "telefones": [
+      "94992609271"
+    ],
+    "criou_senha_acesso": true,
+    "contratos_resort": [],
+    "veiculos": [],
+    "perfil": {
+      "permissoes": []
+    },
+    "perfil_v2": {
+      "_id": "68dfb949bf66e8d3245d4741",
+      "nome": "VENDEDOR",
+      "scopes": [
+        "usuarios.leitura_limitada_vendedor",
+        "usuarios.editar",
+        "vendas.leitura_limitada_vendedor",
+        "titulos.leitura_limitada_vendedor"
+      ]
+    },
+    "crm_levels": [],
+    "senha": "$2b$10$fOPZYUm84/lh0mEc3UmuCuVV7GWE.zHb2dO8Ud1CsYXVyM6OK74jS",
+    "numero_telefone_acesso": "94992609271",
+    "clube": {
+      "_id": "68d18e77f0d20fe8813947ff",
+      "nome": "VALE DAS MINAS"
+    },
+    "status": "ATIVO",
+    "niveis_acesso": [
+      "VENDEDOR",
+      "CLIENTE",
+      "ADMINISTRATIVO"
+    ],
+    "associado_status": "NAO ASSOCIADO",
+    "user_devices": [],
+    "all_titulos": [],
+    "created_at": {
+      "$date": "2025-10-03T20:24:54.644Z"
+    },
+    "updated_at": {
+      "$date": "2025-11-26T12:00:01.710Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "68e0311729b3e854212bed10"
+    },
+    "nome": "VALÉRIA LIBONATI BATISTA APOLO",
+    "cpf_cnpj": "00976524236",
+    "telefones": [
+      "91980420630"
+    ],
+    "criou_senha_acesso": true,
+    "contratos_resort": [],
+    "veiculos": [],
+    "perfil": {
+      "permissoes": []
+    },
+    "perfil_v2": {
+      "_id": "68dfb949bf66e8d3245d4741",
+      "nome": "VENDEDOR",
+      "scopes": [
+        "usuarios.leitura_limitada_vendedor",
+        "usuarios.editar",
+        "vendas.leitura_limitada_vendedor",
+        "titulos.leitura_limitada_vendedor"
+      ]
+    },
+    "crm_levels": [],
+    "senha": "$2b$10$HQP1tnR3dVSvEXLKet4Y6OFo1Bydx2lOZIY4YGjAtuHHEn5Q6hdcy",
+    "numero_telefone_acesso": "91980420630",
+    "clube": {
+      "_id": "68d18e77f0d20fe8813947ff",
+      "nome": "VALE DAS MINAS"
+    },
+    "status": "ATIVO",
+    "niveis_acesso": [
+      "VENDEDOR",
+      "CLIENTE",
+      "ADMINISTRATIVO"
+    ],
+    "associado_status": "NAO ASSOCIADO",
+    "user_devices": [],
+    "all_titulos": [],
+    "created_at": {
+      "$date": "2025-10-03T20:24:55.101Z"
+    },
+    "updated_at": {
+      "$date": "2025-11-26T12:00:01.710Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "68e0311729b3e854212bed13"
+    },
+    "nome": "MATHEUS CHAGAS DA ROCHA",
+    "cpf_cnpj": "04401739221",
+    "telefones": [
+      "92991193102"
+    ],
+    "criou_senha_acesso": true,
+    "contratos_resort": [],
+    "veiculos": [],
+    "perfil": {
+      "permissoes": []
+    },
+    "perfil_v2": {
+      "_id": "68dfb949bf66e8d3245d4741",
+      "nome": "VENDEDOR",
+      "scopes": [
+        "usuarios.leitura_limitada_vendedor",
+        "usuarios.editar",
+        "vendas.leitura_limitada_vendedor",
+        "titulos.leitura_limitada_vendedor"
+      ]
+    },
+    "crm_levels": [],
+    "senha": "$2b$10$oOsFiqPK..U2PSeDVmTQN.Yxv9Neb2RnLXwvfyyLjo1fCaPFNB6vG",
+    "numero_telefone_acesso": "92991193102",
+    "clube": {
+      "_id": "68d18e77f0d20fe8813947ff",
+      "nome": "VALE DAS MINAS"
+    },
+    "status": "ATIVO",
+    "niveis_acesso": [
+      "VENDEDOR",
+      "CLIENTE",
+      "ADMINISTRATIVO"
+    ],
+    "associado_status": "NAO ASSOCIADO",
+    "user_devices": [],
+    "all_titulos": [],
+    "created_at": {
+      "$date": "2025-10-03T20:24:55.550Z"
+    },
+    "updated_at": {
+      "$date": "2025-11-26T12:00:01.710Z"
+    },
+    "__v": 0,
+    "appEngine": {
+      "ip": "170.239.202.244",
+      "city": "parauapebas",
+      "region": "pa",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+      "last_request": {
+        "$date": "2025-11-19T16:56:49.638Z"
+      },
+      "method": "GET",
+      "endpoint": "/v3/admin/usuarios/usuario/documento"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68e0311829b3e854212bed16"
+    },
+    "nome": "ÁUREA DE ARAÚJO DE VASCONCELOS",
+    "cpf_cnpj": "04834409228",
+    "telefones": [
+      "91985120015"
+    ],
+    "criou_senha_acesso": true,
+    "contratos_resort": [],
+    "veiculos": [],
+    "perfil": {
+      "permissoes": []
+    },
+    "perfil_v2": {
+      "_id": "68dfb949bf66e8d3245d4741",
+      "nome": "VENDEDOR",
+      "scopes": [
+        "usuarios.leitura_limitada_vendedor",
+        "usuarios.editar",
+        "vendas.leitura_limitada_vendedor",
+        "titulos.leitura_limitada_vendedor"
+      ]
+    },
+    "crm_levels": [],
+    "senha": "$2b$10$VmEpd8iE/IzMc8mbbO12VuXm.S/xtsMnmPexKHi4CpKYHq.eoZvl.",
+    "numero_telefone_acesso": "91985120015",
+    "clube": {
+      "_id": "68d18e77f0d20fe8813947ff",
+      "nome": "VALE DAS MINAS"
+    },
+    "status": "ATIVO",
+    "niveis_acesso": [
+      "VENDEDOR",
+      "CLIENTE",
+      "ADMINISTRATIVO"
+    ],
+    "associado_status": "NAO ASSOCIADO",
+    "user_devices": [],
+    "all_titulos": [],
+    "created_at": {
+      "$date": "2025-10-03T20:24:56.015Z"
+    },
+    "updated_at": {
+      "$date": "2025-11-26T12:00:01.710Z"
+    },
+    "__v": 0,
+    "appEngine": {
+      "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+      "last_request": {
+        "$date": "2025-10-03T20:26:09.084Z"
+      },
+      "method": "GET",
+      "endpoint": "/v3/admin/usuarios"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68e049e90d4e7aa463b81151"
+    },
+    "nome": "RUAN HENRIQUE ARAGAO DOS SANTOS",
+    "tipo_documento": "cpf",
+    "cpf_cnpj": "00403723248",
+    "email": "",
+    "email_secundario": "",
+    "telefones": [],
+    "rg": "",
+    "endereco_primario": {
+      "cep": "",
+      "logradouro": "",
+      "bairro": "",
+      "numero": "",
+      "cidade": "",
+      "estado": "",
+      "complemento": ""
+    },
+    "criou_senha_acesso": true,
+    "criou_conta_operador": true,
+    "lead_primeira_captura": {
+      "criou_conta": true,
+      "data_hora": {
+        "$date": "2025-10-03T22:10:49.465Z"
+      },
+      "capturado_por": {
+        "_id": "68d195c67a358e1969380882",
+        "nome": "Leonardo Souza",
+        "cpf_cnpj": "02581748206"
+      }
+    },
+    "contratos_resort": [],
+    "data_nascimento": "",
+    "estado_civil": "",
+    "renda_familiar": "",
+    "genero": "",
+    "profissao": "",
+    "filhos": "",
+    "imovel": "",
+    "cartao_credito": "",
+    "cheque": "",
+    "veiculos": [],
+    "capturado_por": {
+      "_id": "68d195c67a358e1969380882",
+      "nome": "Leonardo Souza",
+      "cpf_cnpj": "02581748206",
+      "numero_telefone_acesso": "91983045923"
+    },
+    "perfil": {
+      "permissoes": []
+    },
+    "perfil_v2": {
+      "_id": "68dfb949bf66e8d3245d4741",
+      "nome": "VENDEDOR",
+      "scopes": [
+        "usuarios.leitura_limitada_vendedor",
+        "usuarios.editar",
+        "vendas.leitura_limitada_vendedor",
+        "titulos.leitura_limitada_vendedor"
+      ]
+    },
+    "crm_levels": [],
+    "senha": "$2b$10$iyy1EclrEO0..rlFySwAd.I1prjHgzDVBaaFgI5dO6yJmJSMhvv4y",
+    "clube": {
+      "_id": "68d18e77f0d20fe8813947ff",
+      "nome": "VALE DAS MINAS"
+    },
+    "status": "ATIVO",
+    "niveis_acesso": [
+      "CLIENTE",
+      "VENDEDOR",
+      "ADMINISTRATIVO"
+    ],
+    "associado_status": "NAO ASSOCIADO",
+    "user_devices": [],
+    "all_titulos": [],
+    "created_at": {
+      "$date": "2025-10-03T22:10:49.677Z"
+    },
+    "updated_at": {
+      "$date": "2025-11-26T12:00:01.710Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "68e0586afb565b5d57f05b39"
+    },
+    "nome": "Wilton Nojosa",
+    "tipo_documento": "cpf",
+    "cpf_cnpj": "54207622268",
+    "email": "wiltonnojosa@gmail.com",
+    "email_secundario": "wiltonnojosa@gmail.com",
+    "telefones": [],
+    "rg": "",
+    "endereco_primario": {
+      "cep": "77015298",
+      "logradouro": "Quadra ARSO 23 Alameda 5",
+      "numero": "04",
+      "complemento": "",
+      "bairro": "Plano Diretor Sul",
+      "cidade": "PALMAS",
+      "estado": "TO"
+    },
+    "criou_senha_acesso": true,
+    "criou_conta_operador": true,
+    "lead_primeira_captura": {
+      "criou_conta": true,
+      "data_hora": {
+        "$date": "2025-10-03T23:12:42.727Z"
+      },
+      "capturado_por": {
+        "_id": "68dd701d73849bb8e4ab5295",
+        "nome": "Renan Ribeiro",
+        "cpf_cnpj": "73634700149"
+      }
+    },
+    "contratos_resort": [],
+    "data_nascimento": "",
+    "estado_civil": "CASADO",
+    "renda_familiar": "",
+    "genero": "MASCULINO",
+    "profissao": "",
+    "filhos": "",
+    "imovel": "",
+    "cartao_credito": "",
+    "cheque": "",
+    "veiculos": [],
+    "capturado_por": {
+      "_id": "68dd701d73849bb8e4ab5295",
+      "nome": "Renan Ribeiro",
+      "cpf_cnpj": "73634700149",
+      "numero_telefone_acesso": "11989264271"
+    },
+    "perfil": {
+      "permissoes": []
+    },
+    "perfil_v2": {
+      "_id": "68d195c67a358e1969380881",
+      "nome": "ADMINISTRADOR",
+      "scopes": [
+        "*"
+      ]
+    },
+    "crm_levels": [],
+    "senha": "$2b$10$mh75AQH9CjNaBzt.5u9vFej2kir/QDFZAIXxC6Rd4PlIdYuvv.eg.",
+    "clube": {
+      "_id": "68d18e77f0d20fe8813947ff",
+      "nome": "VALE DAS MINAS"
+    },
+    "status": "ATIVO",
+    "niveis_acesso": [
+      "CLIENTE",
+      "VENDEDOR",
+      "ADMINISTRATIVO"
+    ],
+    "associado_status": "NAO ASSOCIADO",
+    "user_devices": [],
+    "all_titulos": [],
+    "created_at": {
+      "$date": "2025-10-03T23:12:42.842Z"
+    },
+    "updated_at": {
+      "$date": "2025-11-26T12:00:01.710Z"
+    },
+    "__v": 0,
+    "atualizado_por": {
+      "_id": "68dd701d73849bb8e4ab5295",
+      "nome": "Renan Ribeiro",
+      "cpf_cnpj": "73634700149"
+    },
+    "appEngine": {
+      "ip": "2804:37f0:8036:8f00:d79:b7cd:942a:4bfc",
+      "city": "castanhal",
+      "region": "pa",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "last_request": {
+        "$date": "2025-11-06T19:04:41.289Z"
+      },
+      "method": "GET",
+      "endpoint": "/v3/admin/comum/origens-venda/disponiveis"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68e2913a36a5caae90c8e1ee"
+    },
+    "nome": "ALEXANDER GABRIEL OLIVEIRA CASTRO",
+    "tipo_documento": "cpf",
+    "cpf_cnpj": "02860194266",
+    "email": "gabrielcastro488@gmail.com",
+    "email_secundario": "",
+    "telefones": [
+      "91984520791"
+    ],
+    "rg": "7290392",
+    "endereco_primario": {
+      "cep": "68742755",
+      "logradouro": "Travessa Cônego Luís Leitão",
+      "numero": "2409",
+      "complemento": "",
+      "bairro": "Estrela",
+      "cidade": "CASTANHAL",
+      "estado": "PA"
+    },
+    "contratos_resort": [],
+    "data_nascimento": "17/09/1995",
+    "estado_civil": "CASADO",
+    "renda_familiar": "",
+    "genero": "MASCULINO",
+    "profissao": "",
+    "filhos": "",
+    "imovel": "",
+    "cartao_credito": "",
+    "cheque": "",
+    "veiculos": [],
+    "capturado_por": {
+      "_id": "68dd701d73849bb8e4ab5295",
+      "nome": "Renan Ribeiro",
+      "cpf_cnpj": "73634700149",
+      "numero_telefone_acesso": "11989264271"
+    },
+    "perfil": {
+      "permissoes": []
+    },
+    "perfil_v2": {
+      "_id": "68e69a8d544757065708d0c4",
+      "nome": "GERENTE DE VENDAS",
+      "scopes": [
+        "usuarios.leitura",
+        "usuarios.editar",
+        "usuarios.painel_usuarios",
+        "titulos.leitura",
+        "titulos.editar_dados_basicos",
+        "titulos.editar_dependente",
+        "titulos.cobrancas",
+        "titulos.editar_observacoes",
+        "vendas.leitura",
+        "vendas.pdv_titulos",
+        "vendas.leitura_lancamentos_avulsos",
+        "vendas.leitura_painel_lancamentos_avulsos",
+        "vendas.leitura_painel_faturamento",
+        "vendas.editar_lancamentos_avulsos",
+        "agendamentos.leitura",
+        "acoes.leitura",
+        "acoes.editar",
+        "relatorios.clientes",
+        "relatorios.clientes_aniversariantes",
+        "relatorios.titulos",
+        "relatorios.renovacao_clientes",
+        "relatorios.visitantes_diario",
+        "pagina_inicial.card_novos_clientes",
+        "pagina_inicial.card_novos_titulos",
+        "pagina_inicial.card_titulos_a_vencer",
+        "pagina_inicial.card_mapa_titulos",
+        "pagina_inicial.card_mapa_acessos",
+        "pagina_inicial.card_faturamento_titulos",
+        "titulos.leitura_contrato_digital",
+        "titulos.editar_contrato_digital"
+      ]
+    },
+    "crm_levels": [],
+    "numero_telefone_acesso": "91984520791",
+    "clube": {
+      "_id": "68d18e77f0d20fe8813947ff",
+      "nome": "VALE DAS MINAS"
+    },
+    "status": "ATIVO",
+    "niveis_acesso": [
+      "CLIENTE",
+      "VENDEDOR",
+      "ADMINISTRATIVO"
+    ],
+    "associado_status": "NAO ASSOCIADO",
+    "qcscore_data_consulta": {
+      "$date": "2025-10-05T15:37:52.115Z"
+    },
+    "user_devices": [],
+    "all_titulos": [],
+    "created_at": {
+      "$date": "2025-10-05T15:39:38.067Z"
+    },
+    "updated_at": {
+      "$date": "2025-11-26T12:00:01.710Z"
+    },
+    "__v": 0,
+    "qcscore_conceito": "B",
+    "qcscore_legenda": "Costuma apresentar inadimplência baixa",
+    "atualizado_por": {
+      "_id": "68d195c67a358e1969380882",
+      "cpf_cnpj": "02581748206",
+      "nome": "Leonardo Souza"
+    },
+    "data_nascimento_date": {
+      "$date": "1995-09-17T00:00:00.000Z"
+    },
+    "criou_senha_acesso": true,
+    "senha": "$2b$10$jeqXXZJUHjqZs.q37o1kFe5YAGDJdDuk6s3nai1cFfuzH8hJolvbS",
+    "ultima_alteracao_senha": {
+      "$date": "2025-10-06T01:32:21.317Z"
+    },
+    "profile_image_public": "https://storage.googleapis.com/valedasminasapp.firebasestorage.app/files-v3%2F68e2913a36a5caae90c8e1ee.png",
+    "appEngine": {
+      "ip": "170.239.200.78",
+      "city": "parauapebas",
+      "region": "pa",
+      "user_agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_6_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.6 Mobile/15E148 Safari/604.1",
+      "last_request": {
+        "$date": "2025-11-23T06:33:30.189Z"
+      },
+      "method": "GET",
+      "endpoint": "/v3/admin/dashboard"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68e4043963a56b631dd15b84"
+    },
+    "nome": "CARLA ADRIELE NASCIMENTO SILVA",
+    "tipo_documento": "cpf",
+    "cpf_cnpj": "02019916240",
+    "email": "perspectivacs23@gmail.com",
+    "email_secundario": "",
+    "telefones": [
+      "91982666497"
+    ],
+    "rg": "",
+    "endereco_primario": {
+      "cep": "",
+      "logradouro": "",
+      "numero": "",
+      "complemento": "",
+      "bairro": "",
+      "cidade": "",
+      "estado": ""
+    },
+    "criou_senha_acesso": true,
+    "criou_conta_operador": true,
+    "lead_primeira_captura": {
+      "criou_conta": true,
+      "data_hora": {
+        "$date": "2025-10-06T18:02:33.606Z"
+      },
+      "capturado_por": {
+        "_id": "68d195c67a358e1969380882",
+        "nome": "Leonardo Souza",
+        "cpf_cnpj": "02581748206"
+      }
+    },
+    "contratos_resort": [],
+    "data_nascimento": "",
+    "estado_civil": "",
+    "renda_familiar": "",
+    "genero": "",
+    "profissao": "",
+    "filhos": "",
+    "imovel": "",
+    "cartao_credito": "",
+    "cheque": "",
+    "veiculos": [],
+    "capturado_por": {
+      "_id": "68d195c67a358e1969380882",
+      "nome": "Leonardo Souza",
+      "cpf_cnpj": "02581748206",
+      "numero_telefone_acesso": "91983045923"
+    },
+    "perfil": {
+      "permissoes": []
+    },
+    "perfil_v2": {
+      "_id": "68d195c67a358e1969380881",
+      "nome": "ADMINISTRADOR",
+      "scopes": [
+        "*"
+      ]
+    },
+    "crm_levels": [],
+    "senha": "$2b$10$5tF4huRZpH90tTMLkwmEpet1Cf50g5c8XymroH5WUlXyNEvGo.LJe",
+    "clube": {
+      "_id": "68d18e77f0d20fe8813947ff",
+      "nome": "VALE DAS MINAS"
+    },
+    "status": "ATIVO",
+    "niveis_acesso": [
+      "CLIENTE",
+      "VENDEDOR",
+      "ADMINISTRATIVO"
+    ],
+    "associado_status": "NAO ASSOCIADO",
+    "user_devices": [],
+    "all_titulos": [],
+    "created_at": {
+      "$date": "2025-10-06T18:02:33.654Z"
+    },
+    "updated_at": {
+      "$date": "2025-11-26T12:00:01.710Z"
+    },
+    "__v": 0,
+    "atualizado_por": {
+      "_id": "68e4043963a56b631dd15b84",
+      "nome": "CARLA ADRIELE NASCIMENTO SILVA",
+      "cpf_cnpj": "02019916240"
+    },
+    "appEngine": {
+      "ip": "170.239.202.244",
+      "city": "parauapebas",
+      "region": "pa",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+      "last_request": {
+        "$date": "2025-11-22T11:57:21.433Z"
+      },
+      "method": "GET",
+      "endpoint": "/v3/admin/vendas/formas-pagamento"
+    },
+    "qcscore_conceito": "D",
+    "qcscore_data_consulta": {
+      "$date": "2025-10-10T11:41:35.189Z"
+    },
+    "qcscore_legenda": "Perfil de risco",
+    "ultima_alteracao_senha": {
+      "$date": "2025-10-10T15:32:22.720Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68e41c481f4453f20d8f1abe"
+    },
+    "nome": "KARIN FARIAS DA SILVA",
+    "tipo_documento": "cpf",
+    "cpf_cnpj": "05589086248",
+    "email": "karinfarias72@gmail.com",
+    "email_secundario": "",
+    "telefones": [
+      "91987364917"
+    ],
+    "rg": "055.890.862-48",
+    "endereco_primario": {
+      "cep": "68515000",
+      "logradouro": "Rua Guanabara",
+      "numero": "165",
+      "complemento": "",
+      "bairro": "",
+      "cidade": "PARAUAPEBAS",
+      "estado": "PA"
+    },
+    "contratos_resort": [],
+    "data_nascimento": "05/07/2002",
+    "estado_civil": "UNIAO ESTAVEL",
+    "renda_familiar": "",
+    "genero": "FEMININO",
+    "profissao": "",
+    "filhos": "",
+    "imovel": "",
+    "cartao_credito": "",
+    "cheque": "",
+    "veiculos": [],
+    "capturado_por": {
+      "_id": "68dd701d73849bb8e4ab5295",
+      "nome": "Renan Ribeiro",
+      "cpf_cnpj": "73634700149",
+      "numero_telefone_acesso": "11989264271"
+    },
+    "perfil": {
+      "permissoes": []
+    },
+    "perfil_v2": {
+      "_id": "68e4048a63a56b631dd15ba2",
+      "nome": "FINANCEIRO",
+      "scopes": [
+        "pagina_inicial.card_novos_clientes",
+        "pagina_inicial.card_novos_titulos",
+        "pagina_inicial.card_titulos_a_vencer",
+        "pagina_inicial.card_mapa_titulos",
+        "pagina_inicial.card_mapa_acessos",
+        "pagina_inicial.card_faturamento_titulos",
+        "pagina_inicial.card_faturamento_total",
+        "pagina_inicial.card_faturamento_extras",
+        "usuarios.leitura",
+        "usuarios.editar",
+        "titulos.leitura",
+        "titulos.editar_dados_basicos",
+        "titulos.editar_dependente",
+        "titulos.cobrancas",
+        "titulos.leitura_contrato_digital",
+        "titulos.editar_observacoes",
+        "titulos.editar_contrato_digital",
+        "vendas.leitura",
+        "vendas.pdv_titulos",
+        "vendas.pdv_carteirinhas",
+        "vendas.pdv_carteirinhas_alterar_valor",
+        "vendas.pdv_produtos",
+        "vendas.leitura_lancamentos_avulsos",
+        "vendas.leitura_painel_lancamentos_avulsos",
+        "vendas.editar_lancamentos_avulsos",
+        "financeiro.leitura_painel_cobrancas",
+        "vendas.pdv_titulos_desconto_maximo"
+      ]
+    },
+    "crm_levels": [],
+    "numero_telefone_acesso": "91987364917",
+    "clube": {
+      "_id": "68d18e77f0d20fe8813947ff",
+      "nome": "VALE DAS MINAS"
+    },
+    "status": "ATIVO",
+    "niveis_acesso": [
+      "CLIENTE",
+      "VENDEDOR",
+      "ADMINISTRATIVO"
+    ],
+    "associado_status": "NAO ASSOCIADO",
+    "qcscore_data_consulta": {
+      "$date": "2025-10-06T19:44:44.092Z"
+    },
+    "user_devices": [],
+    "all_titulos": [],
+    "created_at": {
+      "$date": "2025-10-06T19:45:12.785Z"
+    },
+    "updated_at": {
+      "$date": "2025-11-26T12:00:01.710Z"
+    },
+    "__v": 0,
+    "atualizado_por": {
+      "_id": "68dd701d73849bb8e4ab5295",
+      "nome": "Renan Ribeiro",
+      "cpf_cnpj": "73634700149"
+    },
+    "criou_senha_acesso": true,
+    "data_nascimento_date": {
+      "$date": "2002-07-05T00:00:00.000Z"
+    },
+    "senha": "$2b$10$3hMqN4UkGpJVtbKQWUX/Ye31TyHpF4y0QqBHjMK8aoMOYVX0RsqJ6",
+    "ultima_alteracao_senha": {
+      "$date": "2025-10-06T19:51:15.717Z"
+    },
+    "appEngine": {
+      "ip": "170.239.202.244",
+      "city": "parauapebas",
+      "region": "pa",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "last_request": {
+        "$date": "2025-10-08T21:35:40.146Z"
+      },
+      "method": "GET",
+      "endpoint": "/v3/admin/comum/origens-venda/disponiveis"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68e9238398f4532de0ae4589"
+    },
+    "nome": "LUCIENE DE ALMEIDA SILVA",
+    "tipo_documento": "cpf",
+    "cpf_cnpj": "29654831287",
+    "email": "lasruas@yahoo.com.br",
+    "email_secundario": "",
+    "telefones": [
+      "94981873008"
+    ],
+    "rg": "",
+    "endereco_primario": {
+      "cep": "",
+      "logradouro": "",
+      "numero": "",
+      "complemento": "",
+      "bairro": "",
+      "cidade": "",
+      "estado": ""
+    },
+    "contratos_resort": [],
+    "data_nascimento": "",
+    "estado_civil": "",
+    "renda_familiar": "",
+    "genero": "",
+    "profissao": "",
+    "filhos": "",
+    "imovel": "",
+    "cartao_credito": "",
+    "cheque": "",
+    "veiculos": [],
+    "capturado_por": {
+      "_id": "68dea9abda9325a10d7ec15d",
+      "nome": "Vinicius Correa Brasil",
+      "cpf_cnpj": "04354465256",
+      "numero_telefone_acesso": "91981294373"
+    },
+    "perfil": {
+      "permissoes": []
+    },
+    "perfil_v2": {
+      "_id": "68d195c67a358e1969380881",
+      "nome": "ADMINISTRADOR",
+      "scopes": [
+        "*"
+      ]
+    },
+    "crm_levels": [],
+    "numero_telefone_acesso": "94981873008",
+    "clube": {
+      "_id": "68d18e77f0d20fe8813947ff",
+      "nome": "VALE DAS MINAS"
+    },
+    "status": "ATIVO",
+    "niveis_acesso": [
+      "CLIENTE",
+      "VENDEDOR",
+      "ADMINISTRATIVO"
+    ],
+    "associado_status": "NAO ASSOCIADO",
+    "qcscore_data_consulta": {
+      "$date": "2025-10-10T15:16:48.337Z"
+    },
+    "user_devices": [],
+    "all_titulos": [],
+    "created_at": {
+      "$date": "2025-10-10T15:17:23.972Z"
+    },
+    "updated_at": {
+      "$date": "2025-11-26T12:00:01.710Z"
+    },
+    "__v": 0,
+    "atualizado_por": {
+      "_id": "68dea9abda9325a10d7ec15d",
+      "nome": "Vinicius Correa Brasil",
+      "cpf_cnpj": "04354465256"
+    },
+    "criou_senha_acesso": true,
+    "senha": "$2b$10$qzm3c222ISU0FvJfKQgfLudIKkDzGOUWZjCJrXCl8jNYfIalLNh1i",
+    "ultima_alteracao_senha": {
+      "$date": "2025-10-10T15:19:52.699Z"
+    },
+    "appEngine": {
+      "ip": "170.239.202.253",
+      "city": "parauapebas",
+      "region": "pa",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+      "last_request": {
+        "$date": "2025-11-26T11:46:07.401Z"
+      },
+      "method": "GET",
+      "endpoint": "/v3/admin/comum/default-values"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68fa8bc04faff90d8f05ca81"
+    },
+    "nome": "SUZANE FERREIRA DE SOUSA",
+    "tipo_documento": "cpf",
+    "cpf_cnpj": "06219370295",
+    "email": "suzaneferreira001@gmail.com",
+    "email_secundario": "",
+    "telefones": [],
+    "rg": "",
+    "endereco_primario": {
+      "cep": "",
+      "logradouro": "",
+      "numero": "",
+      "complemento": "",
+      "bairro": "",
+      "cidade": "",
+      "estado": ""
+    },
+    "contratos_resort": [],
+    "data_nascimento": "",
+    "estado_civil": "",
+    "renda_familiar": "",
+    "genero": "",
+    "profissao": "",
+    "filhos": "",
+    "imovel": "",
+    "cartao_credito": "",
+    "cheque": "",
+    "veiculos": [],
+    "capturado_por": {
+      "_id": "68dea9abda9325a10d7ec15d",
+      "nome": "Vinicius Correa Brasil",
+      "cpf_cnpj": "04354465256",
+      "numero_telefone_acesso": "91981294373"
+    },
+    "perfil": {
+      "permissoes": []
+    },
+    "perfil_v2": {
+      "_id": "68dfb949bf66e8d3245d4741",
+      "nome": "VENDEDOR",
+      "scopes": [
+        "usuarios.leitura_limitada_vendedor",
+        "usuarios.editar",
+        "vendas.leitura_limitada_vendedor",
+        "titulos.leitura_limitada_vendedor"
+      ]
+    },
+    "crm_levels": [],
+    "clube": {
+      "_id": "68d18e77f0d20fe8813947ff",
+      "nome": "VALE DAS MINAS"
+    },
+    "status": "ATIVO",
+    "niveis_acesso": [
+      "CLIENTE",
+      "VENDEDOR",
+      "ADMINISTRATIVO"
+    ],
+    "associado_status": "NAO ASSOCIADO",
+    "user_devices": [],
+    "all_titulos": [],
+    "created_at": {
+      "$date": "2025-10-23T20:10:40.325Z"
+    },
+    "updated_at": {
+      "$date": "2025-11-26T12:00:01.710Z"
+    },
+    "__v": 0,
+    "atualizado_por": {
+      "_id": "68dea9abda9325a10d7ec15d",
+      "nome": "Vinicius Correa Brasil",
+      "cpf_cnpj": "04354465256"
+    },
+    "criou_senha_acesso": true,
+    "senha": "$2b$10$eQ2z.RbIogl.BJvUc9.uZOWuxlbybC5rnPhqzU/SJdgnEM4JEqze6",
+    "ultima_alteracao_senha": {
+      "$date": "2025-10-23T20:12:08.695Z"
+    },
+    "appEngine": {
+      "ip": "170.239.202.244",
+      "city": "parauapebas",
+      "region": "pa",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "last_request": {
+        "$date": "2025-10-30T17:40:47.601Z"
+      },
+      "method": "POST",
+      "endpoint": "/v1/relogin"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6903a82336dcd40b7d235cae"
+    },
+    "nome": "POLIANA SOUSA ANDRADE",
+    "tipo_documento": "cpf",
+    "cpf_cnpj": "01410465209",
+    "email": "pollianaexpress@gmail.com",
+    "email_secundario": "",
+    "telefones": [
+      "94981267694"
+    ],
+    "rg": "",
+    "endereco_primario": {
+      "cep": "",
+      "logradouro": "",
+      "numero": "",
+      "complemento": "",
+      "bairro": "",
+      "cidade": "",
+      "estado": ""
+    },
+    "contratos_resort": [],
+    "data_nascimento": "",
+    "estado_civil": "",
+    "renda_familiar": "",
+    "genero": "",
+    "profissao": "",
+    "filhos": "",
+    "imovel": "",
+    "cartao_credito": "",
+    "cheque": "",
+    "veiculos": [],
+    "capturado_por": {
+      "_id": "68dea9abda9325a10d7ec15d",
+      "nome": "Vinicius Correa Brasil",
+      "cpf_cnpj": "04354465256",
+      "numero_telefone_acesso": "91981294373"
+    },
+    "perfil": {
+      "permissoes": []
+    },
+    "perfil_v2": {
+      "_id": "68d195c67a358e1969380881",
+      "nome": "ADMINISTRADOR",
+      "scopes": [
+        "*"
+      ]
+    },
+    "crm_levels": [],
+    "numero_telefone_acesso": "94981267694",
+    "clube": {
+      "_id": "68d18e77f0d20fe8813947ff",
+      "nome": "VALE DAS MINAS"
+    },
+    "status": "ATIVO",
+    "niveis_acesso": [
+      "CLIENTE",
+      "VENDEDOR",
+      "ADMINISTRATIVO"
+    ],
+    "associado_status": "NAO ASSOCIADO",
+    "qcscore_data_consulta": {
+      "$date": "2025-10-24T14:33:10.509Z"
+    },
+    "user_devices": [],
+    "all_titulos": [],
+    "created_at": {
+      "$date": "2025-10-30T18:02:11.320Z"
+    },
+    "updated_at": {
+      "$date": "2025-11-26T12:00:01.710Z"
+    },
+    "__v": 0,
+    "atualizado_por": {
+      "_id": "68dea9abda9325a10d7ec15d",
+      "nome": "Vinicius Correa Brasil",
+      "cpf_cnpj": "04354465256"
+    },
+    "criou_senha_acesso": true,
+    "senha": "$2b$10$BkU2Y2sz/xhQ46muBQvqFud7VOi5MQMazsC4qAIe1xjmGabI05Z5i",
+    "ultima_alteracao_senha": {
+      "$date": "2025-10-30T18:03:19.810Z"
+    },
+    "appEngine": {
+      "ip": "170.239.202.253",
+      "city": "parauapebas",
+      "region": "pa",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "last_request": {
+        "$date": "2025-11-03T12:21:02.178Z"
+      },
+      "method": "GET",
+      "endpoint": "/v3/admin/usuarios/usuario/documento"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6906b7e43fddc57af691cb84"
+    },
+    "nome": "JAELSON FONTINELE PEREIRA",
+    "tipo_documento": "cpf",
+    "cpf_cnpj": "01592035205",
+    "email": "",
+    "email_secundario": "",
+    "telefones": [
+      "62998589452"
+    ],
+    "rg": "",
+    "endereco_primario": {
+      "cep": "",
+      "logradouro": "",
+      "numero": "",
+      "complemento": "",
+      "bairro": "",
+      "cidade": "",
+      "estado": ""
+    },
+    "contratos_resort": [],
+    "data_nascimento": "",
+    "estado_civil": "",
+    "renda_familiar": "",
+    "genero": "",
+    "profissao": "",
+    "filhos": "",
+    "imovel": "",
+    "cartao_credito": "",
+    "cheque": "",
+    "veiculos": [],
+    "capturado_por": {
+      "_id": "68dea9abda9325a10d7ec15d",
+      "nome": "Vinicius Correa Brasil",
+      "cpf_cnpj": "04354465256",
+      "numero_telefone_acesso": "91981294373"
+    },
+    "perfil": {
+      "permissoes": []
+    },
+    "perfil_v2": {
+      "_id": "68dfb949bf66e8d3245d4741",
+      "nome": "VENDEDOR",
+      "scopes": [
+        "usuarios.leitura_limitada_vendedor",
+        "usuarios.editar",
+        "vendas.leitura_limitada_vendedor",
+        "titulos.leitura_limitada_vendedor"
+      ]
+    },
+    "crm_levels": [],
+    "numero_telefone_acesso": "62998589452",
+    "clube": {
+      "_id": "68d18e77f0d20fe8813947ff",
+      "nome": "VALE DAS MINAS"
+    },
+    "status": "ATIVO",
+    "niveis_acesso": [
+      "CLIENTE",
+      "VENDEDOR",
+      "ADMINISTRATIVO"
+    ],
+    "associado_status": "NAO ASSOCIADO",
+    "qcscore_data_consulta": {
+      "$date": "2025-11-02T01:44:37.922Z"
+    },
+    "user_devices": [],
+    "all_titulos": [],
+    "created_at": {
+      "$date": "2025-11-02T01:46:12.868Z"
+    },
+    "updated_at": {
+      "$date": "2025-11-26T12:00:01.710Z"
+    },
+    "__v": 0,
+    "atualizado_por": {
+      "_id": "68dea9abda9325a10d7ec15d",
+      "nome": "Vinicius Correa Brasil",
+      "cpf_cnpj": "04354465256"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "690944741b890d4fb2aeb338"
+    },
+    "nome": "TAINARA DA SILVA ARAUJO",
+    "tipo_documento": "cpf",
+    "cpf_cnpj": "07502879269",
+    "email": "araujotainara2005@gmail.com",
+    "email_secundario": "",
+    "telefones": [
+      "91985991747"
+    ],
+    "rg": "",
+    "endereco_primario": {
+      "cep": "",
+      "logradouro": "",
+      "numero": "",
+      "complemento": "",
+      "bairro": "",
+      "cidade": "",
+      "estado": ""
+    },
+    "contratos_resort": [],
+    "data_nascimento": "",
+    "estado_civil": "",
+    "renda_familiar": "",
+    "genero": "",
+    "profissao": "",
+    "filhos": "",
+    "imovel": "",
+    "cartao_credito": "",
+    "cheque": "",
+    "veiculos": [],
+    "capturado_por": {
+      "_id": "68dea9abda9325a10d7ec15d",
+      "nome": "Vinicius Correa Brasil",
+      "cpf_cnpj": "04354465256",
+      "numero_telefone_acesso": "91981294373"
+    },
+    "perfil": {
+      "permissoes": []
+    },
+    "perfil_v2": {
+      "_id": "68dfb949bf66e8d3245d4741",
+      "nome": "VENDEDOR",
+      "scopes": [
+        "usuarios.leitura_limitada_vendedor",
+        "usuarios.editar",
+        "vendas.leitura_limitada_vendedor",
+        "titulos.leitura_limitada_vendedor"
+      ]
+    },
+    "crm_levels": [],
+    "numero_telefone_acesso": "91985991747",
+    "clube": {
+      "_id": "68d18e77f0d20fe8813947ff",
+      "nome": "VALE DAS MINAS"
+    },
+    "status": "ATIVO",
+    "niveis_acesso": [
+      "CLIENTE",
+      "VENDEDOR",
+      "ADMINISTRATIVO"
+    ],
+    "associado_status": "NAO ASSOCIADO",
+    "qcscore_data_consulta": {
+      "$date": "2025-11-03T19:08:38.177Z"
+    },
+    "user_devices": [],
+    "all_titulos": [],
+    "created_at": {
+      "$date": "2025-11-04T00:10:28.901Z"
+    },
+    "updated_at": {
+      "$date": "2025-11-26T16:00:23.405Z"
+    },
+    "__v": 0,
+    "atualizado_por": {
+      "_id": "68dea9abda9325a10d7ec15d",
+      "nome": "Vinicius Correa Brasil",
+      "cpf_cnpj": "04354465256"
+    },
+    "criou_senha_acesso": true,
+    "senha": "$2b$10$46AbLHJnIcLX4WeE6x77pe9F2Y5bwDNgcqF6zYCl2GIN54./6cMTm",
+    "ultima_alteracao_senha": {
+      "$date": "2025-11-19T22:22:48.682Z"
+    },
+    "appEngine": {
+      "ip": "170.239.202.244",
+      "city": "parauapebas",
+      "region": "pa",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+      "last_request": {
+        "$date": "2025-11-26T16:00:23.341Z"
+      },
+      "method": "GET",
+      "endpoint": "/v3/admin/usuarios/usuario/documento"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "692700c2909d1b596741b723"
+    },
+    "nome": "MAYRON RODRIGUES VIEIRA",
+    "tipo_documento": "cpf",
+    "cpf_cnpj": "05390673263",
+    "email": "",
+    "email_secundario": "",
+    "telefones": [
+      "91984393855"
+    ],
+    "rg": "",
+    "endereco_primario": {
+      "cep": "",
+      "logradouro": "",
+      "numero": "",
+      "complemento": "",
+      "bairro": "",
+      "cidade": "",
+      "estado": ""
+    },
+    "contratos_resort": [],
+    "data_nascimento": "",
+    "estado_civil": "",
+    "renda_familiar": "",
+    "genero": "",
+    "profissao": "",
+    "filhos": "",
+    "imovel": "",
+    "cartao_credito": "",
+    "cheque": "",
+    "veiculos": [],
+    "capturado_por": {
+      "_id": "68dea9abda9325a10d7ec15d",
+      "nome": "Vinicius Correa Brasil",
+      "cpf_cnpj": "04354465256",
+      "numero_telefone_acesso": "91981294373"
+    },
+    "perfil": {
+      "permissoes": []
+    },
+    "perfil_v2": {
+      "_id": "68dfb949bf66e8d3245d4741",
+      "nome": "VENDEDOR",
+      "scopes": [
+        "usuarios.leitura_limitada_vendedor",
+        "usuarios.editar",
+        "vendas.leitura_limitada_vendedor",
+        "titulos.leitura_limitada_vendedor"
+      ]
+    },
+    "crm_levels": [],
+    "numero_telefone_acesso": "91984393855",
+    "clube": {
+      "_id": "68d18e77f0d20fe8813947ff",
+      "nome": "VALE DAS MINAS"
+    },
+    "status": "ATIVO",
+    "niveis_acesso": [
+      "CLIENTE",
+      "VENDEDOR",
+      "ADMINISTRATIVO"
+    ],
+    "associado_status": "NAO ASSOCIADO",
+    "qcscore_data_consulta": {
+      "$date": "2025-11-19T23:29:06.052Z"
+    },
+    "user_devices": [],
+    "all_titulos": [],
+    "created_at": {
+      "$date": "2025-11-26T13:29:38.601Z"
+    },
+    "updated_at": {
+      "$date": "2025-11-26T13:30:16.728Z"
+    },
+    "__v": 0,
+    "atualizado_por": {
+      "_id": "68dea9abda9325a10d7ec15d",
+      "nome": "Vinicius Correa Brasil",
+      "cpf_cnpj": "04354465256"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69272f7a909d1b596741ce67"
+    },
+    "nome": "FABIANE NOGUEIRA PACHECO",
+    "tipo_documento": "cpf",
+    "cpf_cnpj": "08675272260",
+    "email": "",
+    "email_secundario": "",
+    "telefones": [
+      "91981886135"
+    ],
+    "rg": "",
+    "endereco_primario": {
+      "cep": "",
+      "logradouro": "",
+      "numero": "",
+      "complemento": "",
+      "bairro": "",
+      "cidade": "",
+      "estado": ""
+    },
+    "contratos_resort": [],
+    "data_nascimento": "",
+    "estado_civil": "",
+    "renda_familiar": "",
+    "genero": "",
+    "profissao": "",
+    "filhos": "",
+    "imovel": "",
+    "cartao_credito": "",
+    "cheque": "",
+    "veiculos": [],
+    "capturado_por": {
+      "_id": "68dea9abda9325a10d7ec15d",
+      "nome": "Vinicius Correa Brasil",
+      "cpf_cnpj": "04354465256",
+      "numero_telefone_acesso": "91981294373"
+    },
+    "perfil": {
+      "permissoes": []
+    },
+    "perfil_v2": {
+      "_id": "68dfb949bf66e8d3245d4741",
+      "nome": "VENDEDOR",
+      "scopes": [
+        "usuarios.leitura_limitada_vendedor",
+        "usuarios.editar",
+        "vendas.leitura_limitada_vendedor",
+        "titulos.leitura_limitada_vendedor"
+      ]
+    },
+    "crm_levels": [],
+    "numero_telefone_acesso": "91981886135",
+    "clube": {
+      "_id": "68d18e77f0d20fe8813947ff",
+      "nome": "VALE DAS MINAS"
+    },
+    "status": "ATIVO",
+    "niveis_acesso": [
+      "CLIENTE",
+      "VENDEDOR",
+      "ADMINISTRATIVO"
+    ],
+    "associado_status": "NAO ASSOCIADO",
+    "qcscore_data_consulta": {
+      "$date": "2025-11-20T11:58:05.569Z"
+    },
+    "user_devices": [],
+    "all_titulos": [],
+    "created_at": {
+      "$date": "2025-11-26T16:48:58.739Z"
+    },
+    "updated_at": {
+      "$date": "2025-11-26T16:49:25.684Z"
+    },
+    "__v": 0,
+    "atualizado_por": {
+      "_id": "68dea9abda9325a10d7ec15d",
+      "nome": "Vinicius Correa Brasil",
+      "cpf_cnpj": "04354465256"
+    }
+  }
+]

@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 
 const ModelSchema = new mongoose.Schema({
+    data_reserva: Date,
     codigo_reserva: String,
     loteamento: {
         _id: String,

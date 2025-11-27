@@ -7,6 +7,8 @@ import { LOTE_SITUACAO, LotesModel } from "../models/lotes.model";
 import { RESERVA_SITUACAO, ReservasModel } from "../models/reservas.model";
 import dayjs from "dayjs";
 import { UsuariosModel } from "../models/usuarios.model";
+import { LoteamentosMapasModel } from "../models/loteamentos-mapa.model";
+import { ObjectId } from "mongoose";
 
 export default {
 
@@ -42,6 +44,17 @@ export default {
                 .sort({ createdAt: -1 })
                 .lean();
 
+            for (let l of lista) {
+                let mapa_virtual = await LoteamentosMapasModel.findOne({ 'loteamento._id': l._id.toString() }).lean();
+                if (mapa_virtual) {
+                    l.mapa_virtual = {
+                        _id: mapa_virtual._id,
+                        mapa_virtual: mapa_virtual.mapa_virtual,
+                        lotes: mapa_virtual.lotes,
+                    }
+                }
+            }
+
             res.json({ lista, total })
         } catch (error) {
             errorHandler(error, res);
@@ -56,6 +69,15 @@ export default {
             let loteamento = await LoteamentosModel.findById(req.query.id).lean();
             if (!loteamento) {
                 throw new Error("Loteamento não encontrado.");
+            }
+            let mapa_virtual = await LoteamentosMapasModel.findOne({ 'loteamento._id': loteamento._id.toString() }).lean();
+            if (mapa_virtual) {
+                loteamento.mapa_virtual = {
+                    // @ts-ignore
+                    _id: mapa_virtual._id,
+                    mapa_virtual: mapa_virtual.mapa_virtual,
+                    lotes: mapa_virtual.lotes,
+                }
             }
             res.json(loteamento);
         } catch (error) {
@@ -160,11 +182,40 @@ export default {
                     }
                 }
             );
+
+            let loteamento = lotesExistentes.length ? lotesExistentes[0].loteamento : null;
+            if (loteamento && loteamento._id) resetSyncLoteamentosLivemap(loteamento._id).then();
             res.json({
                 success: true,
                 message: `${resultado.modifiedCount} lote(s) atualizado(s) com sucesso.`,
                 modificados: resultado.modifiedCount
             });
+        } catch (error) {
+            errorHandler(error, res);
+        }
+    },
+    saveMapaVirtualLoteamento: async (req: Request, res: Response, next: NextFunction) => {
+        try {
+            console.log(req.body);
+            let { loteamento_id, imagem_url, lotes } = req.body;
+            let loteamento = await LoteamentosModel.findById(loteamento_id);
+            if (!loteamento) {
+                throw new Error("Loteamento não encontrado.");
+            }
+            await LoteamentosMapasModel.updateOne(
+                {
+                    'loteamento._id': loteamento._id,
+                },
+                {
+                    $set: {
+                        loteamento: loteamento,
+                        mapa_virtual: imagem_url,
+                        lotes
+                    }
+                },
+                { upsert: true }
+            );
+            res.json({ message: "Mapa virtual atualizado com sucesso." });
         } catch (error) {
             errorHandler(error, res);
         }
@@ -285,6 +336,7 @@ export default {
                 });
                 await Promise.all(loteUpdates);
             }
+            resetSyncLoteamentosLivemap(loteamento._id.toString()).then()
             res.json({ message: `Lotes importados com sucesso. ${lotes_diferenca.length ? 'Lotes com diferença de situação: ' + lotes_diferenca.join(', ') : ''}` });
         } catch (error) {
             errorHandler(error, res);
@@ -293,7 +345,7 @@ export default {
     getReserva: async (req: Request, res: Response, next: NextFunction) => {
         try {
             // @ts-ignore
-            if (!isScopeAuthorized('loteamentos.leitura', req.usuario?.scopes)) {
+            if (!isScopeAuthorized('reservas.leitura', req.usuario?.scopes)) {
                 throw UNAUTH_SCOPE
             }
             let reserva = await ReservasModel.findById(req.query.id).lean();
@@ -317,7 +369,7 @@ export default {
         try {
             let { perpage, page, ...query } = req.query
             // @ts-ignore
-            if (!isScopeAuthorized('loteamentos.leitura', req.usuario?.scopes)) {
+            if (!isScopeAuthorized('reservas.leitura', req.usuario?.scopes)) {
                 throw UNAUTH_SCOPE
             }
             let busca = req.query?.q || "";
@@ -353,7 +405,10 @@ export default {
     },
     updateReserva: async (req: Request, res: Response, next: NextFunction) => {
         try {
-            console.log(req.body);
+            // @ts-ignore
+            if (!isScopeAuthorized('reservas.editar', req.usuario?.scopes)) {
+                throw UNAUTH_SCOPE
+            }
 
             if (req.body.operacao == 'cancelar-reserva') {
                 let _reserva = await ReservasModel.findById(req.body.reserva_id);
@@ -386,6 +441,7 @@ export default {
                     );
                 });
                 await Promise.all(loteUpdates);
+                if (!!_reserva.loteamento?._id) resetSyncLoteamentosLivemap(_reserva.loteamento._id).then();
                 res.json({ message: "Reserva cancelada e lotes liberados com sucesso." });
                 return;
             }
@@ -422,6 +478,7 @@ export default {
                     );
                 });
                 await Promise.all(loteUpdates);
+                if (!!_reserva.loteamento?._id) resetSyncLoteamentosLivemap(_reserva.loteamento._id).then();
                 res.json({ message: "Vendedor da reserva alterado com sucesso." });
                 return;
             }
@@ -463,7 +520,7 @@ export default {
                         await _reserva.save();
                     }
                 }
-
+                if (!!_reserva.loteamento?._id) resetSyncLoteamentosLivemap(_reserva.loteamento._id).then();
                 res.json({ message: "Situação do lote alterada com sucesso." });
                 return;
             }
@@ -478,6 +535,11 @@ export default {
     },
     setReserva: async (req: Request, res: Response, next: NextFunction) => {
         try {
+            // @ts-ignore
+            if (!isScopeAuthorized('reservas.editar', req.usuario?.scopes)) {
+                throw UNAUTH_SCOPE
+            }
+
             let _loteamento = await LoteamentosModel.findOne({ _id: req.body.loteamento_id });
             if (!_loteamento) {
                 throw new Error("Loteamento não encontrado.");
@@ -511,6 +573,7 @@ export default {
             let cod = await ReservasModel.countDocuments();
             let codigo_reserva = `RES-${(cod + 1).toString().padStart(6, '0')}`;
             let reserva = new ReservasModel({
+                data_reserva: dayjs(req.body.data_reserva).toDate(),
                 codigo_reserva,
                 loteamento: _loteamento,
                 lotes: _lotes.map(lote => ({
@@ -545,6 +608,7 @@ export default {
                 );
             });
             await Promise.all(loteUpdates);
+            resetSyncLoteamentosLivemap(_loteamento._id.toString()).then();
             res.json(reserva);
         } catch (error) {
             errorHandler(error, res);
@@ -553,3 +617,13 @@ export default {
 }
 
 
+export async function resetSyncLoteamentosLivemap(loteamentoId: string) {
+    await LoteamentosModel.updateOne(
+        { _id: loteamentoId },
+        {
+            $set: {
+                livemap_sync: 0
+            }
+        }
+    );
+}

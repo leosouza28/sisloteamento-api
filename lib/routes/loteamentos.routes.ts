@@ -9,6 +9,7 @@ router.get('/v1/loteamento', autenticar, loteamentosController.getLoteamento);
 router.post('/v1/loteamentos', autenticar, loteamentosController.setLoteamento);
 
 router.get('/v1/loteamentos/lotes', autenticar, loteamentosController.getLotesPorLoteamento);
+router.post('/v1/loteamentos/mapa-virtual', autenticar, loteamentosController.saveMapaVirtualLoteamento);
 router.put('/v1/lotes/situacao', autenticar, loteamentosController.alterarSituacaoLotes);
 
 router.post('/v1/lotes/importar', autenticar, loteamentosController.importarLotes);
