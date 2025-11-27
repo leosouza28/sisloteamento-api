@@ -8,6 +8,7 @@ import { LOTE_SITUACAO, LotesModel } from './models/lotes.model';
 import { createCanvas, loadImage } from 'canvas';
 import { storage } from "./integrations/firebase";
 import axios from 'axios';
+import { delayTimer } from './util';
 
 dayjs.locale('pt-br');
 
@@ -178,6 +179,7 @@ async function start() {
     try {
         await mongoose.connect(DB_URL);
         await atualizarMapasVirtuais();
+        await delayTimer(10000);
         process.exit(1);
     } catch (error) {
         console.log('Error connecting to MongoDB:', error);
