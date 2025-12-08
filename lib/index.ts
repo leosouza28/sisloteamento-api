@@ -14,6 +14,8 @@ import { USUARIO_MODEL_TIPO_TELEFONE, USUARIO_NIVEL, UsuariosModel } from './mod
 
 import bcrypt from 'bcrypt';
 import { scopes } from './oauth/permissions';
+import readVendas from './read-vendas';
+import readBloqueados from './read-bloqueados';
 
 dayjs.locale('pt-br');
 
@@ -44,6 +46,10 @@ async function start() {
         server.listen(PORT, async () => {
             console.log(`Server is running on port ${PORT}`);
             // startDB();
+            
+            // readVendas()
+            // readBloqueados();
+
 
             // let niveis = [USUARIO_NIVEL.CLIENTE, USUARIO_NIVEL.VENDEDOR];
             // for (let v of vendedores_json) {

@@ -1,17 +1,25 @@
+import dayjs from "dayjs";
 import { NextFunction, Request, Response } from "express";
-import { errorHandler } from "../util";
-import { UNAUTH_SCOPE } from "../oauth";
+import { LoteamentosMapasModel } from "../models/loteamentos-mapa.model";
 import { LoteamentosModel } from "../models/loteamentos.model";
-import { isScopeAuthorized } from "../oauth/permissions";
 import { LOTE_SITUACAO, LotesModel } from "../models/lotes.model";
 import { RESERVA_SITUACAO, ReservasModel } from "../models/reservas.model";
-import dayjs from "dayjs";
 import { UsuariosModel } from "../models/usuarios.model";
-import { LoteamentosMapasModel } from "../models/loteamentos-mapa.model";
-import { ObjectId } from "mongoose";
+import { UNAUTH_SCOPE } from "../oauth";
+import { isScopeAuthorized } from "../oauth/permissions";
+import { errorHandler } from "../util";
 
 export default {
 
+    getLoteamentosDisponiveis: async (req: Request, res: Response, next: NextFunction) => {
+        try {
+            let lista = await LoteamentosModel.find({}).lean();
+            let total = lista.length;
+            res.json({ lista, total });
+        } catch (error) {
+            errorHandler(error, res);
+        }
+    },
     getLoteamentos: async (req: Request, res: Response, next: NextFunction) => {
         try {
             let { perpage, page, ...query } = req.query
@@ -372,6 +380,8 @@ export default {
             if (!isScopeAuthorized('reservas.leitura', req.usuario?.scopes)) {
                 throw UNAUTH_SCOPE
             }
+
+
             let busca = req.query?.q || "";
             let lista: any = [], total = 0,
                 porpagina = 10, pagina = 0, skip = 0, limit = 0;
@@ -391,11 +401,36 @@ export default {
                 ]
             }
 
+            if (query?.situacao == 'ATIVA') {
+                find.situacao = { $in: [RESERVA_SITUACAO.ATIVA] };
+            }
+            if (query?.situacao == 'CONCLUIDA') {
+                find.situacao = { $in: [RESERVA_SITUACAO.CONCLUIDA] };
+            }
+            if (query?.situacao == 'CANCELADA') {
+                find.situacao = { $in: [RESERVA_SITUACAO.CANCELADA] };
+            }
+            if (query?.situacao == 'ATIVA_CONCLUIDA') {
+                find.situacao = { $in: [RESERVA_SITUACAO.ATIVA, RESERVA_SITUACAO.CONCLUIDA] };
+            }
+            if (query?.vendedorId) {
+                find['vendedor._id'] = query.vendedorId
+            }
+            if (!!query?.dataInicial && !!query?.dataFinal) {
+                find['data_reserva'] = {
+                    $gte: dayjs(query.dataInicial as string).toDate(),
+                    $lte: dayjs(query.dataFinal as string).toDate()
+                }
+            }
+            if (!!query?.loteamentoId) {
+                find['loteamento._id'] = query.loteamentoId
+            }
+
             total = await ReservasModel.find(find).countDocuments();
             lista = await ReservasModel.find(find)
                 .skip(skip)
                 .limit(limit)
-                .sort({ createdAt: -1 })
+                .sort({ data_reserva: 1 })
                 .lean();
 
             res.json({ lista, total })

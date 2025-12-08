@@ -123,7 +123,7 @@ export default {
     getVendedores: async (req: Request, res: Response, next: NextFunction) => {
         try {
             let vendedores = await UsuariosModel.find({ niveis: USUARIO_NIVEL.VENDEDOR, status: USUARIO_MODEL_STATUS.ATIVO }).sort({ nome: 1 }).lean();
-            if (!req.usuario?.scopes?.includes('*')) {
+            if (!req.usuario?.scopes?.includes('*') && !req.usuario?.scopes?.includes('usuarios.leitura_vendedores')) {
                 if (req.usuario?.niveis?.includes(USUARIO_NIVEL.VENDEDOR)) {
                     // @ts-ignore
                     vendedores = vendedores.filter(v => v._id.toString() == req.usuario._id.toString());

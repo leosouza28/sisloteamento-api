@@ -3,3 +3,7 @@ dispatch:
     service: sisloteamento-api
   - url: "sisloteamento.lsdevelopers.dev/*"
     service: sisloteamento-front
+  - url: "adelino-api.lsdevelopers.dev/*"
+    service: adelino-api
+  - url: "adelino.lsdevelopers.dev/*"
+    service: adelino-front

@@ -5,6 +5,7 @@ import loteamentosController from '../controllers/loteamentos.controller';
 const router = Router();
 
 router.get('/v1/loteamentos', autenticar, loteamentosController.getLoteamentos);
+router.get('/v1/loteamentos/disponiveis', autenticar, loteamentosController.getLoteamentosDisponiveis);
 router.get('/v1/loteamento', autenticar, loteamentosController.getLoteamento);
 router.post('/v1/loteamentos', autenticar, loteamentosController.setLoteamento);
 

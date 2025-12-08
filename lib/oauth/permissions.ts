@@ -14,6 +14,8 @@ const scopes = {
     "usuarios.leitura": "Ler usuários",
     "usuarios.editar": "Editar usuários",
 
+    "usuarios.leitura_vendedores": "Permite visualizar todos os vendedores",
+
     "loteamentos.leitura": "Ler loteamentos",
     "loteamentos.editar": "Editar loteamentos",
 
